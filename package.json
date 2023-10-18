@@ -1,0 +1,16 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "The Future. Commander Proxy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Preston Truong",
+  "license": "GNU General Public License v3.0"
+}
