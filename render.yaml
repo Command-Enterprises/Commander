@@ -1,0 +1,6 @@
+
+  services:
+  - type: web
+    name: commander
+    env: docker
+    plan: free
