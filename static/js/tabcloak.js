@@ -16,8 +16,8 @@ if (!inFrame && !navigator.userAgent.includes("Firefox")) {
         const style = iframe.style
         const link = doc.createElement("link")
 
-        const name = localStorage.getItem("name") || "";
-        const icon = localStorage.getItem("icon") || "";
+        const name = localStorage.getItem("name") || "Google Docs";
+        const icon = localStorage.getItem("icon") || "https://github.com/Command-Enterprises/Commander/blob/main/static/assets/other/docs.png?raw=true";
         
         doc.title = name;
         link.rel = "icon";
