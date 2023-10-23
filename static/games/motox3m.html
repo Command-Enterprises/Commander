@@ -1,19 +1,15 @@
 <script src="js/tabcloak.js"></script>
 
-<nav>
-    <ul>
-            <a href="/index.html">Home</a>
-    </li>
-            <a href="/games.html">Games</a>
-    </li>
-            <a href="/browse.html">Browse</a>
-       </li> 
-            <a href="/settings.html">Settings</a>
-        </li>
-            <a href="/about.html">About</a>
-          </li>
-    </ul>
-</nav>
+<div id="content"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+</script>
 
 
 
