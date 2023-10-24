@@ -2,8 +2,10 @@
 
 <div id="content"></div>
 
+<div id="content"></div>
+
 <script>
-    fetch('navbar.html')
+    fetch('../navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
