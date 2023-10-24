@@ -9,4 +9,14 @@
         .catch(error => console.error(error));
 </script>
 
-<iframe src="https://docs.google.com/document/d/16tTr6eG7Tk_t001Z3JT1kgakSKkVrPRpcRbhyfDbe4g/edit?usp=sharing" frameborder="0" scrolling="yes" width="100%" height="100%" loading="lazy"></iframe>
+<script>
+// <iframe src="https://docs.google.com/document/d/16tTr6eG7Tk_t001Z3JT1kgakSKkVrPRpcRbhyfDbe4g/edit?usp=sharing" frameborder="0" scrolling="yes" width="100%" height="100%" loading="lazy"></iframe>
+</script>
+
+    <script>
+      window.onload = function () {
+        let encodedUrl = "https://docs.google.com/document/d/16tTr6eG7Tk_t001Z3JT1kgakSKkVrPRpcRbhyfDbe4g/edit?usp=sharing"
+        encodedUrl = "/service/" + encodedUrl;
+        document.querySelector("#iframeid").src = encodedUrl;
+      };
+    </script>
