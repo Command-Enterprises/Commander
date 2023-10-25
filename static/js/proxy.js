@@ -1,47 +1,40 @@
-fetch('https://publicsuffix.org/list/public_suffix_list.dat')
-    .then(response => response.text())
-    .then(data => {
-        var tlds = data.split('\n')
-                      .filter(line => !line.startsWith('//') && line.trim() !== '')
-                      .map(line => line.trim());
+function proxyUrl() {
+    var targetUrl = document.getElementById('targetUrl').value;
 
-        function isValidTld(url) {
-            return tlds.some(tld => url.endsWith('.' + tld));
-        }
+    // Check if the URL has a valid TLD, if not, search on Google
+    if (!hasValidTld(targetUrl)) {
+        searchOnGoogle(targetUrl);
+        return;
+    }
 
-        function appendDefaultTld(url) {
-            if (!isValidTld(url)) {
-                return url + '.com';
-            }
-            return url;
-        }
+    // If URL has valid TLD, add https:// if missing
+    if (!/^https?:\/\//i.test(targetUrl)) {
+        targetUrl = 'https://' + targetUrl;
+    }
 
-        function proxyUrl() {
-            var targetUrl = document.getElementById('targetUrl').value;
-            if (!/^https?:\/\//i.test(targetUrl)) {
-                targetUrl = 'http://' + targetUrl;
-            }
+    var proxyContent = document.getElementById('proxyContent');
 
-            targetUrl = appendDefaultTld(targetUrl);
-
-            var proxyContent = document.getElementById('proxyContent');
-
-            fetch(`/proxy?url=${encodeURIComponent(targetUrl)}`)
-                .then(response => response.text())
-                .then(data => {
-                    proxyContent.innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    proxyContent.innerHTML = 'Error occurred while fetching the content.';
-                });
-        }
-
-        document.getElementById('urlForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            proxyUrl();
+    fetch(`/proxy?url=${encodeURIComponent(targetUrl)}`)
+        .then(response => response.text())
+        .then(data => {
+            proxyContent.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            proxyContent.innerHTML = 'Error occurred while fetching the content.';
         });
-    })
-    .catch(error => {
-        console.error('Error fetching TLD data:', error);
-    });
+}
+
+function hasValidTld(url) {
+    var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+    if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function searchOnGoogle(query) {
+    var googleSearchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+    window.open(googleSearchUrl, '_blank');
+}
