@@ -13,12 +13,17 @@
     <form id="urlForm">
         <label for="targetUrl">Enter Target URL:</label>
         <input type="text" id="targetUrl" name="targetUrl" required>
-        <button type="button" onclick="proxyUrl()">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 
     <div id="proxyContent"></div>
 
     <script>
+        document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            proxyUrl();
+        });
+
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
