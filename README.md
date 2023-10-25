@@ -6,3 +6,5 @@ Email Us at CommanderProxy@cyber-wizard.com | Join the Discord! https://discord.
 ***
 ## Contributors
 [![Contrib](https://contrib.rocks/image?repo=Command-Enterprises/Commander)](https://github.com/Command-Enterprises/Commander/graphs/contributors)
+
+### Contributing is welcome! 
