@@ -1,22 +1,31 @@
-<script src="assets/js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="content"></div>
+<head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="js/proxy.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
 
-<script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error(error));
-</script>
+<body>
+    <div id="content"></div>
 
     <form id="urlForm">
         <label for="targetUrl">Enter Target URL:</label>
         <input type="text" id="targetUrl" name="targetUrl" required>
         <button type="button" onclick="proxyUrl()">Submit</button>
     </form>
+
     <div id="proxyContent"></div>
 
-    <script src="js/proxy.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('content').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+    </script>
 </body>
+
+</html>
