@@ -11,10 +11,12 @@
         .catch(error => console.error(error));
 </script>
 
-    <form>
-      <input tag="searchbar" id="searchbar" placeholder="Search the web freely" />
+    <form id="urlForm">
+        <label for="targetUrl">Enter Target URL:</label>
+        <input type="text" id="targetUrl" name="targetUrl" required>
+        <button type="button" onclick="proxyUrl()">Submit</button>
     </form>
-  </div>
-<script>
-const searchbar = document.getElementById("searchbar");
-</script>
+    <div id="proxyContent"></div>
+
+    <script src="js/proxy.js"></script>
+</body>
