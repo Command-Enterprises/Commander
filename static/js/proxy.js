@@ -1,13 +1,11 @@
 function proxyUrl() {
     var targetUrl = document.getElementById('targetUrl').value;
 
-    // Check if the URL has a valid TLD, if not, search on Google
     if (!hasValidTld(targetUrl)) {
         searchOnGoogle(targetUrl);
         return;
     }
 
-    // If URL has valid TLD, add https:// if missing
     if (!/^https?:\/\//i.test(targetUrl)) {
         targetUrl = 'https://' + targetUrl;
     }
