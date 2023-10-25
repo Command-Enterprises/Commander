@@ -6,6 +6,9 @@ html,body {width:100%;height:100%;}
   font-family: verdana;
   
 }
+body{
+  background-image: url("command-enterprises.png")
+}
 
 #container {
   width: 300px;
