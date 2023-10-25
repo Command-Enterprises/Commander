@@ -10,5 +10,3 @@ The future. Commander Proxy.
 [![Contrib](https://contrib.rocks/image?repo=Command-Enterprises/Commander)](https://github.com/Command-Enterprises/Commander/graphs/contributors)
 
 ### Contributing is welcome!
-
-### Want to disable Securly? Go to [here](https://disablesecurly.com/).
