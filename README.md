@@ -8,4 +8,4 @@ Email us at CommanderProxy@cyber-wizard.com <img src="static/assets/other/email.
 ## Contributors
 [![Contrib](https://contrib.rocks/image?repo=Command-Enterprises/Commander)](https://github.com/Command-Enterprises/Commander/graphs/contributors)
 
-### Contributing is welcome!
+### Contributing is welcome! Go to the discussions tab, and reply to the hiring page! (Volunteers Only)
