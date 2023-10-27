@@ -34,3 +34,7 @@ body {
         #loaded-content {
             float: left;
         }
+.gameimg{
+height: 150px
+width:150px
+transition:0.3sec
