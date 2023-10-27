@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="gamepagestyle.css">
 <head>
-        <style>
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    </script>
+    <link rel="stylesheet" href="gamepagestyle.css">
+    <style>
         .sidenav {
             height: 100%;
             width: 120px;
@@ -33,7 +41,7 @@
         }
 
         #loaded-content {
-            float: left; 
+            float: left;
         }
     </style>
 </head>
@@ -43,28 +51,17 @@
         <a href="twoplayergames.html">2 Player Games</a>
     </div>
 
-<div id="content"></div>
-
-<script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error(error));
-</script>
-<head>
-<body>    
-    <h1><center>All Games</center></h1>
-    <a href="games/dinogame.html"> Dino Game</a>
-</li>
-    <a href="games/geodash.html"> Geometry Dash Lite</a>
-</li>
-    <a href="games/motox3m.html"> Moto X3M</a>
-</li>
-    <a href="games/slopegame.html"> Slope </a>
-    
-    
-  
+    <div id="content">
+        <h1 style="text-align: center;">All Games</h1>
+    </li>
+        <a href="games/dinogame.html">Dino Game</a>
+   </li>
+        <a href="games/geodash.html">Geometry Dash Lite</a>
+   </li>
+        <a href="games/motox3m.html">Moto X3M</a>
+   </li>
+        <a href="games/slopegame.html">Slope</a>
+   </li>
+    </div>
 </body>
 </html>
