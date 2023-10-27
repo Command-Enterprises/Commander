@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="index.css">
+<script src="js/tabcloak.js"></script>
+
+<div id="content"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+</script>
+
+
+<h1><center>Two Player Games</center></h1>
+  </li>
+       <a href="games/janisarrybattles.html<a>
+</html>
