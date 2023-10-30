@@ -1,6 +1,6 @@
-const owner = 'Quartinal';
-const repo = 'Commander-exploit';
-const branch = 'exploit';
+const owner = 'Command-Enterprises';
+const repo = 'Commander';
+const branch = 'main';
 
 fetch(`https://api.github.com/repos/${owner}/${repo}/commits/${branch}`)
     .then(response => response.json())
