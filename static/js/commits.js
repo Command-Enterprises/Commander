@@ -22,7 +22,7 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/commits/${branch}`)
 
         // Check if the status message is in the mapping, and set the corresponding emoji
         if (commitStatusMessage in statusEmojiMap) {
-            titleTag.textContent = `${statusEmojiMap[commitStatusMessage]} Commander Proxy`;
+            titleTag.textContent = `${statusEmojiMap[commitStatusMessage]} - Commander Proxy`;
         } else {
             // If the status message is not in the mapping, use a default emoji or handle it accordingly
             titleTag.textContent = '❓ Commander Proxy'; // You can choose any suitable default emoji
