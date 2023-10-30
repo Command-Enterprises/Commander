@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 <head>
     <link rel="stylesheet" href="index.css">
-    <script src="js/tabcloak.js"></script>
+        <script src="js/tabcloak.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -13,10 +13,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Change justify-content to move the navbar to the top */
+        }
+        #navbar {
+            z-index: 1;
+            position: relative;
         }
         #content {
-            z-index: 1;
+            flex: 1; /* Make content flex-grow to take up available space */
             position: relative;
         }
         video {
@@ -30,23 +34,24 @@
     </style>
 </head>
 <body>
-    <div id="content"></div>
+    <div id="navbar">
+        <h1><center>Welcome to Commander Proxy</center></h1>
+    </div>
+
+    <div id="content">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <p><center>The video isn't here yet</center></p>
+    </div>
 
     <script>
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('content').innerHTML = data;
+                document.getElementById('navbar').innerHTML = data;
             })
             .catch(error => console.error(error));
     </script>
-
-    <h1><center>Welcome to Commander Proxy</center></h1>
-
-    <video controls>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-
-    <p><center>The video isn't here yet</center></p>
-</body> 
+</body>
 </html>
