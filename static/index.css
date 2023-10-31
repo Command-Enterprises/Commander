@@ -69,6 +69,7 @@ h2.welcomeText
 h2.welcomeText:hover
 {
   color: rgba(0, 0, 0, 0.64);
+  font-size: 60px;
 }
 ::-webkit-scrollbar /* Delete scrollbar */
 {
