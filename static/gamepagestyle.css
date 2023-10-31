@@ -13,6 +13,30 @@ body {
             overflow-x: hidden;
             padding-top: 20px;
         }
+.navtext{
+   animation-name: navtext-animation
+}
+@keyframes navtext-animation{
+   from {
+    color: purple;
+  }
+  25% {
+    color: orange;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: blue;
+  }
+  to {
+    color: yellow;
+  }
+}
+      
+      
+
+
 
         .sidenav a {
             padding: 15px 25px;
