@@ -2,6 +2,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="gamepagestyle.css">
+    <style>
+        #content a img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <div class="sidenav">
@@ -11,28 +17,27 @@
 
     <div id="content">
         <h1 style="text-align: center;">All Games</h1>
-    </li>
         <a href="games/dinogame.html">
             <img src="/assets/appicons/dinogame.png" alt="Dino Game">
-    </li>
+        </a>
         <a href="games/geodash.html">
             <img src="/assets/appicons/geodash.jpeg" alt="Geometry Dash">
-    </li>
+        </a>
         <a href="games/janissarybattles.html">
             <img src="/assets/appicons/janissarybattles.jpeg" alt="Janissary Battles">
-    </li>
+        </a>
         <a href="games/janissarytower.html">
             <img src="/assets/appicons/janissarytower.jpeg" alt="Janissary Tower">
-    </li>
+        </a>
         <a href="games/motox3m.html">
             <img src="/assets/appicons/motox3m.jpeg" alt="Moto X3M">
-    </li>
+        </a>
         <a href="games/retrobowl.html">
             <img src="/assets/appicons/retrobowl.png" alt="Retro Bowl">
-    </li>
+        </a>
         <a href="games/slopegame.html">
             <img src="/assets/appicons/slopegame.png" alt="Slope">
-    </li>
+        </a>
     </div>
 
     <script>
@@ -41,7 +46,7 @@
         .then(data => {
             document.getElementById('loaded-content').innerHTML = data;
         })
-        .catch(error => console.error(error));
+        .catch error => console.error(error));
     </script>
 </body>
 </html>
