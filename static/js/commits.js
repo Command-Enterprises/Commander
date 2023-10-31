@@ -5,26 +5,23 @@ const branch = 'main';
 fetch(`https://api.github.com/repos/${owner}/${repo}/commits/${branch}`)
     .then(response => response.json())
     .then(data => {
-        const commitStatusMessage = data.files.status; // Assuming this contains the status message
+        const fileStatuses = data.files.map(file => file.status);
 
-        const titleTag = document.querySelector('title.commitChange');
+        const titleTag = document.querySelector('title');
 
-        // Mapping between GitHub commit status messages and emojis
         const statusEmojiMap = {
-            'modified': '🟠', // Replace with the appropriate emoji
-            'added': '➕', // Replace with the appropriate emoji
-            'deleted': '✖', // Replace with the appropriate emoji
+            'modified': '🟠',
+            'added': '➕',
+            'deleted': '✖',
             'renamed': '♻',
             'copied': '📋',
-            'umerged': '✖⛙',
+            'unmerged': '✖⛙',
             'typechange': '📁'
         };
 
-        // Check if the status message is in the mapping, and set the corresponding emoji
-        if (commitStatusMessage in statusEmojiMap) {
-            titleTag.textContent = `${statusEmojiMap[commitStatusMessage]} - Commander Proxy`;
-        } else {
-            // If the status message is not in the mapping, use a default emoji or handle it accordingly
-            titleTag.textContent = '❓ Commander Proxy'; // You can choose any suitable default emoji
-        }
+        // Assuming you want to display an emoji for each status in the title
+        const emojis = fileStatuses.map(status => statusEmojiMap[status] || '❓');
+
+        // Join the emojis with a separator
+        titleTag.textContent = `${emojis.join(' ')} - Commander Proxy`;
     });
