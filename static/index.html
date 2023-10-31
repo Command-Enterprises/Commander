@@ -1,60 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title class="commitChange">Commander Proxy</title>
-    <link rel="stylesheet" href="index.css">
-    <script defer src="js/commits.js"></script>
-    <script defer src="js/tabcloak.js"></script>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; 
-        }
-        #navbar {
-            z-index: 1;
-            position: relative;
-        }
-        #content {
-            flex: 1; 
-            position: relative;
-        }
-        video {
-            object-fit: cover; /* Adjusted property */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 99%;
-            height: 99%;
-        }
-    </style>
-</head>
-<body>
-    <div id="navbar">
-        
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.error(error));
-    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Commander Proxy</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script defer src="js/tabcloak.js"></script>
+        <script defer src="js/commits.js"></script>
+        <!--Google Fonts Links-->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+    </head>
+
+    <body>
+        <!--Harrrrveeey... No center tags!!!-->
+        <div class="header">
+            <a href="index.html"><img src="assets/branding/command-enterprises.png" class="logo" alt="Commander Logo"></a>
+
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="browse.html">Surf</a></li>
+                </ul>
+            </div>
         </div>
-        <h1><center>Welcome to Commander Proxy</center></h1>
-   <div id="content">
-    <video>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-</div>
-</body>
+    </body>
 </html>
