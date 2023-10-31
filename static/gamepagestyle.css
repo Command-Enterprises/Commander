@@ -1,7 +1,7 @@
 body {
    margin: 0;
     font-family: Arial, sans-serif;
-   background: linear-gradient(to right, #1e9600, #fff200, #ff0000);
+    background: linear-gradient(90deg, rgba(255,105,180,1) 0%, rgba(255,0,128,1) 100%);
 }
 .sidenav {
             height: 100%;
