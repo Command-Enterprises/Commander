@@ -56,6 +56,7 @@ div.header div.container ul.menu li a:hover
 }
 h2.welcomeText
 {
+  text-align: center;
   color: azure;
   font-size: 48px;
   font-weight: 800;
