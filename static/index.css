@@ -46,7 +46,7 @@ div.header div.container ul.menu li a
 div.header div.container ul.menu li a:active,
 div.header div.container ul.menu li a:hover
 {
-  -webkit-text-stroke: 1.5px solid #2e2626;
+  -webkit-text-stroke: 1.5px #2e2626;
 }
 ::-webkit-scrollbar /* Delete scrollbar */
 {
