@@ -35,6 +35,7 @@ div.header div.container ul.menu
 {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 div.header div.container ul.menu li
 {
