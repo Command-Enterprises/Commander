@@ -56,11 +56,20 @@ div.header div.container ul.menu li a:hover
 }
 h2.welcomeText
 {
+  position: absolute;
   text-align: center;
+  top: 50%;
   color: azure;
   font-size: 48px;
   font-weight: 800;
   font-family: 'Inter', sans-serif;
+  transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+h2.welcomeText:hover
+{
+  color: darkgray;
+  font-size: 64px;
+  font-weight: 700;
 }
 ::-webkit-scrollbar /* Delete scrollbar */
 {
