@@ -4,7 +4,7 @@ The future. Commander Proxy.
 ### If you need help or want to suggest something, please go to [the discussions tab](https://github.com/Command-Enterprises/Commander/discussions).
 ### Socials:
 - <img src="static/assets/other/email.svg" width="25" height="25">   
-CommandEnterprises@programmer.net 
+CommanderProxy@cyber-wizard.com
 - <img src="static/assets/other/discord.svg" width="25" height="25">  
 https://discord.gg/BwejDYd7pM
 - <img src="static/assets/other/x.png" width="25" height="25">  
