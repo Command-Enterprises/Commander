@@ -27,6 +27,7 @@ div.header a
 }
 div.header a img.logo
 {
+  border-radius: 100px;
   width: 100px;
   height: 100px;
 }
