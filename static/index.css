@@ -34,7 +34,7 @@ div.header a img.logo
 div.header div.container ul.menu
 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 div.header div.container ul.menu li
 {
