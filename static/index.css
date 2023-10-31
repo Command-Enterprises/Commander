@@ -59,6 +59,7 @@ h2.welcomeText
   position: absolute;
   text-align: center;
   top: 50%;
+  left: 50%;
   color: azure;
   font-size: 48px;
   font-weight: 800;
@@ -67,7 +68,7 @@ h2.welcomeText
 }
 h2.welcomeText:hover
 {
-  color: darkgray;
+  color: rgba(0, 0, 0, 0.64);
   font-size: 64px;
   font-weight: 700;
 }
