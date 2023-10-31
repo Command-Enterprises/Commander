@@ -13,5 +13,5 @@ https://discord.gg/BwejDYd7pM
 
 ### Feel free to contribute! Just go to the discussions tab! Also, you are welcome to reply to the hiring page!
 
-### Download here (You can also fork if you want):
+### Download here (We recomend forking):
 [![Download Commander](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/commanderproxy/files/latest/download) [![Download Commander](https://img.shields.io/sourceforge/dt/commanderproxy.svg)](https://sourceforge.net/projects/commanderproxy/files/latest/download)
