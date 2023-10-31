@@ -6,9 +6,9 @@ The future. Commander Proxy.
 - <img src="static/assets/other/email.svg" width="25" height="25">   
 CommanderProxy@cyber-wizard.com
 - <img src="static/assets/other/discord.svg" width="25" height="25">  
-https://discord.gg/BwejDYd7pM
+<a href="https://discord.gg/BwejDYd7pM">Join the Discord</a>
 - <img src="static/assets/other/x.png" width="25" height="25">  
-https://twitter.com/CmdEntOfficial 
+<a href="https://twitter.com/CmdEntOfficial">Follow us on X</a>
 
 
 ## Contributors
