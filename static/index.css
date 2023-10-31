@@ -9,6 +9,9 @@ html,
 body
 {
   background-color: azure;
+  background-image: url('static/assets/other/pexels-kien-virak-4665180.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 div.header
 {
