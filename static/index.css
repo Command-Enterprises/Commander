@@ -54,6 +54,13 @@ div.header div.container ul.menu li a:hover
 {
   -webkit-text-stroke: 1px #2e2626;
 }
+h2.welcomeText
+{
+  color: azure;
+  font-size: 48px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+}
 ::-webkit-scrollbar /* Delete scrollbar */
 {
   display: none;
