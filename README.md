@@ -4,7 +4,9 @@ The future. Commander Proxy.
 ### If you need help or want to suggest something, please go to [the discussions tab](https://github.com/Command-Enterprises/Commander/discussions).
 ### Socials:
 <img src="static/assets/other/email.svg" width="25" height="25"> 
+<p>commandenterprises@programmer.net</p>
 <img src="static/assets/other/discord.svg" width="25" height="25">
+<a href="https://discord.gg/BwejDYd7pM">Discord Link</a>
 
 ## Contributors
 [![Contrib](https://contrib.rocks/image?repo=Command-Enterprises/Commander)](https://github.com/Command-Enterprises/Commander/graphs/contributors)
