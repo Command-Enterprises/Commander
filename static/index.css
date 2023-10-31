@@ -31,15 +31,6 @@ div.header a img.logo
   width: 100px;
   height: 100px;
 }
-div.header div.container ul.menu
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 75%;
-  height: 15vh;
-}
 div.header div.container ul.menu li
 {
   list-style: none;
