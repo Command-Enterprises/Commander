@@ -64,7 +64,7 @@ h2.welcomeText
   font-size: 48px;
   font-weight: 800;
   font-family: 'Inter', sans-serif;
-  transition: 0.3s cubic-bezier(1,-0.7,.6,.79);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: default;
 }
 h2.welcomeText:hover
