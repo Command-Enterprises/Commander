@@ -31,6 +31,11 @@ div.header a img.logo
   width: 75px;
   height: 75px;
 }
+div.header div.container ul.menu
+{
+  display: flex;
+  flex-direction: column;
+}
 div.header div.container ul.menu li
 {
   list-style: none;
