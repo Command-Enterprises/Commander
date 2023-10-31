@@ -72,6 +72,19 @@ h2.welcomeText:hover
   color: rgba(0, 0, 0, 0.64);
   font-size: 60px;
 }
+h2.welcomeTextTwo
+{
+  position: absolute;
+  text-align: center;
+  top: 52%;
+  left: 25%;
+  color: azure;
+  font-size: 48px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  cursor: default;
+}
 ::-webkit-scrollbar /* Delete scrollbar */
 {
   display: none;
