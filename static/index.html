@@ -24,75 +24,9 @@
                     <li><a href="browse.html">Browse</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="gitdis.html">Discussions</a></li>
-
-                    <div class="megaMenu">
-                        <ul class="partsList">
-                            <li><a href="twoplayergames.html">Two Player Games</a></li>
-                            <li><a href="embeddedexploit.html">Embedded Exploit</a></li>
-                            <p>More pages coming soon!</p>
-                        </ul>
-                    </div>
                 </ul>
             </div>
         </div>
-
-        <script>
-            const megaMenu = document.querySelector('div.megaMenu');
-            const trigger = document.querySelector('div.container ul.menu li a[href="index.html"]');
-            const trigger1 = document.querySelector('div.container ul.menu li a[href="games.html"]');
-            const trigger2 = document.querySelector('div.container ul.menu li a[href="browse.html"]');
-            const trigger3 = document.querySelector('div.container ul.menu li a[href="about.html"]');
-            const trigger4 = document.querySelector('div.container ul.menu li a[href="gitdis.html"]');
-
-            trigger.addEventListener('mouseenter', () => {
-                megaMenu.style.display = 'flex';
-                megaMenu.style.animation = 'heightChange 2s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            });
-
-            trigger.addEventListener('mouseleave', () => {
-                megaMenu.style.display = 'none';
-            });
-
-            trigger1.addEventListener('mouseenter', () => {
-                megaMenu.style.display = 'flex';
-                megaMenu.style.left = '22.5%';
-                megaMenu.style.animation = 'heightChange 2s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            });
-
-            trigger1.addEventListener('mouseleave', () => {
-                megaMenu.style.display = 'none';
-            });
-
-            trigger2.addEventListener('mouseenter', () => {
-                megaMenu.style.display = 'flex';
-                megaMenu.style.left = '25%';
-                megaMenu.style.animation = 'heightChange 2s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            });
-
-            trigger2.addEventListener('mouseleave', () => {
-                megaMenu.style.display = 'none';
-            });
-
-            trigger3.addEventListener('mouseenter', () => {
-                megaMenu.style.display = 'flex';
-                megaMenu.style.left = '27.5%';
-                megaMenu.style.animation = 'heightChange 2s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            }); 
-
-            trigger3.addEventListener('mouseleave', () => {
-                megaMenu.style.display = 'none';
-            });
-
-            trigger4.addEventListener('mouseenter', () => {
-                megaMenu.style.display = 'flex';
-                megaMenu.style.left = '30%';
-                megaMenu.style.animation = 'heightChange 2s cubic-bezier(0.445, 0.05, 0.55, 0.95)';
-            });
-
-            trigger4.addEventListener('mouseleave', () => {
-                megaMenu.style.display = 'none';
-            });
-        </script>
 
         <h2 class="welcomeText">Welcome to Commander!</h2>
     </body>
