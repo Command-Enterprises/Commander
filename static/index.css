@@ -25,10 +25,12 @@ div.header a
 {
   text-decoration: none;
 }
-div.header a img.logo
+div.header a h2.logo
 {
+  padding: 18px;
+  background-color: azure;
   border-radius: 100px;
-  width: 75px;
+  width: 155px;
   height: 75px;
 }
 div.header div.container ul.menu
