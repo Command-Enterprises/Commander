@@ -27,11 +27,16 @@ div.header a
 }
 div.header a h2.logo
 {
+  text-align: center;
   padding: 18px;
   background-color: azure;
   border-radius: 100px;
+  color: #070606;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
   width: 155px;
-  height: 75px;
+  height: 35px;
 }
 div.header div.container ul.menu
 {
