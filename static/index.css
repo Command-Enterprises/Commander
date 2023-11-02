@@ -87,7 +87,7 @@ h2.downstreamText
 {
   position: absolute;
   text-align: center;
-  top: 30%;
+  top: 34%;
   color: azure;
   font-size: 36px;
   font-weight: 800;
@@ -112,7 +112,7 @@ div.mirrors
   width: 100%;
   height: 40vh;
 }
-div.mirrors h2
+div.mirrors h2.one
 {
   position: absolute;
   top: 50px;
@@ -124,7 +124,23 @@ div.mirrors h2
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: default;
 }
-div.mirrors h2:hover
+div.mirrors h2.one:hover
+{
+  color: rgba(0, 0, 0, 0.64);
+}
+div.mirrors h2.two
+{
+  position: absolute;
+  top: 54px;
+  left: 100px;
+  color: azure;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+div.mirrors h2.two:hover
 {
   color: rgba(0, 0, 0, 0.64);
 }
