@@ -71,7 +71,7 @@ h2.welcomeText
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 20%;
+  left: 15%;
   color: azure;
   font-size: 48px;
   font-weight: 800;
@@ -86,7 +86,7 @@ h2.welcomeText:hover
 h2.welcomeText a[href="downstream.html"]
 {
   text-decoration: none;
-  color: lightslategrey;
+  color: lightgrey;
 }
 h2.downstreamText
 {
