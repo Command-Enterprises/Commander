@@ -1,11 +1,12 @@
-    <script>
-        fetch('navbar.html')
+<div id="content"></div>
+<script>
+    fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('loaded-content').innerHTML = data;
+            document.getElementById('content').innerHTML = data;
         })
-        .catch error => console.error(error));
-    </script>
+        .catch(error => console.error(error));
+</script>
 <h1>About</h1>
 <h2>Our Socials</h2>
 - <img src="/assets/other/email.svg" width="25" height="25">   
@@ -17,6 +18,8 @@ CommanderProxy@cyber-wizard.com
  <!--I rebel against Elon Musk and his stupid naming-->
 
 <h2>Commander Enterprises</h2>
+<a href="https://command-enterprises.github.io">See everything happening with Command Enterprises on our offical website</a>
+<a href="https://cmd-search.vercel.app">See the work in progress commander search engine, CMD Search</a>
 <div>
     <a href="https://command-enterprises.github.io">See everything happening with Command Enterprises on our offical website</a>
 </div>
