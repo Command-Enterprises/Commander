@@ -83,6 +83,11 @@ h2.welcomeText:hover
 {
   color: rgba(0, 0, 0, 0.64);
 }
+h2.welcomeText a[href="downstream.html"]
+{
+  text-decoration: none;
+  color: lightslategrey;
+}
 h2.downstreamText
 {
   position: absolute;
