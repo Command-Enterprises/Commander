@@ -37,6 +37,11 @@ div.header a h2.logo
   width: 155px;
   height: 35px;
   overflow: hidden;
+  transition: 2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+div.header a h2.logo:hover
+{
+  font-size: 20px;
 }
 div.header div.container ul.menu
 {
