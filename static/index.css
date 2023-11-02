@@ -28,11 +28,11 @@ div.header a
 div.header a h2.logo
 {
   text-align: center;
-  padding: 18px;
+  padding: 12px;
   background-color: azure;
   border-radius: 100px;
   color: #070606;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 800;
   font-family: 'Inter', sans-serif;
   width: 155px;
