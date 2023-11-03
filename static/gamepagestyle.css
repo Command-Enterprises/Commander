@@ -73,8 +73,8 @@ transition:0.3sec
     border-radius: 5px;
     padding: 5px;
     position: absolute;
-    bottom: 0; /* Position at the bottom of the container */
-    left: 50%;
+    bottom: 85; /* Position at the bottom of the container */
+    left: 55%;
     transform: translateX(-50%);
     transition: visibility 0.3s, opacity 0.3s;
     opacity: 0;
