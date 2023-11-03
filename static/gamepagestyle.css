@@ -70,7 +70,7 @@ transition:0.3sec
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 5px;
     position: absolute;
     bottom: 85; /* Position at the bottom of the container */
