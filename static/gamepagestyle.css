@@ -66,20 +66,20 @@ transition:0.3sec
 }   
    
         #content a span {
-            visibility: hidden;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: visibility 0.3s, opacity 0.3s;
-            opacity: 0;
-            z-index: 1;
-        }
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: visibility 0.3s, opacity 0.3s;
+    opacity: 0;
+    z-index: 1;
+}
 
         #content a:hover span {
             visibility: visible;
