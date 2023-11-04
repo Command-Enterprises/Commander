@@ -1,38 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Commander Proxy</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <script defer src="js/commits.js"></script>
-        <script defer src="js/tabcloak.js"></script>
-        <!--Google Fonts Links-->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-    </head>
-
-    <body>
-        <div class="header">
-            <a href="index.html"><h2 class="logo">Commander</h2></a>
-
-            <div class="container">
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="browse.html">Browse</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gitdis.html">Discussions</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="games">
-            <div class="wrapper">
-                <a href="twoplayergames.html"><img src="assets/appicons/twoplayergames.svg" class="twoplayergames" title="Two Player Games" alt="Two Player Games"></a>
-            </div>
-        </div>
-
-        <script defer src="js/scrollgames.js"></script>
-    </body>
+<html>
+<head>
+    <link rel="stylesheet" href="gamepagestyle.css">
+    <style>
+        #content a img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <h2 class="navtext">Navigation</h2>
+        <a href="twoplayergames.html">2 Player Games</a>
+    </div>
+    <div id="content">
+        <h1 style="text-align: center;">All Games</h1>
+        <a href="games/btd5.html">
+            <img src="/assets/appicons/btd5.jpeg" alt=Balloons TD 5">
+            <span>Balloons TD 5</span>
+        </a>
+        <a href="games/dinogame.html">
+            <img src="/assets/appicons/dinogame.png" alt="Dino Game">
+            <span>Dino Game</span>
+        </a>
+        <a href="games/geodash.html">
+            <img src="/assets/appicons/geodash.jpeg" alt="Geometry Dash">
+            <span>Geometry Dash</span>
+        </a>
+        <a href="games/houseofhazards.html">
+            <img src="/assets/appicons/houseofhazards.jpeg" alt="House of Hazards">
+            <span>House of Hazards</span>
+        </a>
+        <a href="games/janissarybattles.html">
+            <img src="/assets/appicons/janissarybattles.jpeg" alt="Janissary Battles">
+            <span>Janissary Battles</span>
+        </a>
+        <a href="games/janissarytower.html">
+            <img src="/assets/appicons/janissarytower.jpeg" alt="Janissary Tower">
+            <span>Janissary Tower</span>
+        </a>
+        <a href="games/minigiants.html">
+            <img src="/assets/appicons/minigiants.jpg" alt="Minigiants.io">
+            <span>Minigiants.io</span>
+        </a>
+        <a href="games/motox3m.html">
+            <img src="/assets/appicons/motox3m.jpeg" alt="Moto X3M">
+@@ -54,7 +55,7 @@ <h1 style="text-align: center;">All Games</h1>
+        </a>
+        <a href="games/retrobowl.html">
+            <img src="/assets/appicons/retrobowl.png" alt="Retro Bowl">
+            <span>Retro Bowl</span>
+            <span>Retro Bowl(Not Working)</span>
+        </a>
+        <a href="games/slopegame.html">
+            <img src="/assets/appicons/slopegame.png" alt="Slope">
+            <span>Slope</span>
+        </a>
+    </div>
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('loaded-content').innerHTML = data;
+        })
+        .catch error => console.error(error));
+    </script>
+</body>
 </html>
