@@ -18,6 +18,7 @@ function changeAttributes()
         currentIndex = 0;
     }
     image.style.opacity = 0;
+    image.style.transition = '0.3s ease';
     setTimeout(() => {
         imageLink.href = imageLinks[currentIndex];
         image.src = imageSources[currentIndex];
