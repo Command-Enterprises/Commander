@@ -7,6 +7,80 @@
         })
         .catch(error => console.error(error));
 </script>
+<style>
+html,
+body
+{
+text-align: center;
+  background: linear-gradient(to right, #43cea2, #185a9d); 
+  display: flex;
+div.header
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  background-color: rgba(0, 139, 139, 0.577);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  height: 20vh;
+}
+div.header a
+{
+  text-decoration: none;
+}
+div.header a h2.logo
+{
+  padding: 12px;
+  background-color: azure;
+  border-radius: 100px;
+  color: #070606;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  width: 155px;
+  height: 35px;
+  overflow: hidden;
+  transition: 2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+div.header a h2.logo:hover
+{
+  font-size: 20px;
+}
+div.header div.container ul.menu
+{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+div.header div.container ul.menu li
+{
+  list-style: none;
+}
+div.header div.container ul.menu li a
+{
+  color: blanchedalmond;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+</style>
+<head>
+        <div class="header">
+            <a href="index.html"><h2 class="logo">Commander</h2></a>
+
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gitdis.html">Discussions</a></li>
+                </ul>
+            </div>
+        </div>
+</head>
 <h1>About</h1>
 <h2>Our Socials</h2>
 - <img src="/assets/other/email.svg" width="25" height="25">   
