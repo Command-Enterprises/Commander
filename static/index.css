@@ -141,6 +141,79 @@ div.mirrors p.stableText
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: default;
 }
+div.games
+{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  top: 30%;
+  left: 0%;
+  width: 100%;
+  height: 50%;
+  overflow-x: hidden;
+}
+div.games div.wrapper a
+{
+  text-decoration: none;
+}
+div.games div.wrapper a img.twoplayergames
+{
+  width: 200px;
+  height: 200px;
+}
+div.games div.wrapper a img.btd5
+{
+  width: 195px;
+  height: 151px;
+}
+div.games div.wrapper a img.trex
+{
+  width: 144px;
+  height: 144px;
+}
+div.games div.wrapper a img.houseofhazards
+{
+  width: 198.4px;
+  height: 125.4px;
+}
+div.games div.wrapper a img.janissarybattles
+{
+  width: calc(396 / 2);
+  width: calc(222 / 2);
+}
+div.games div.wrapper a img.janissarytower
+{
+  width: 120px;
+  height: 63px;
+}
+div.games div.wrapper a img.minigiants
+{
+  width: 200px;
+  height: 200px;
+}
+div.games div.wrapper a img.motox3m
+{
+  width: 200px;
+  height: 200px;
+}
+div.games div.wrapper a img.thepasswordgame
+{
+  width: 156.8;
+  height: 11;
+}
+div.games div.wrapper a img.slopegame
+{
+  width: 200px;
+  height: 200px;
+}
+div.games div.wrapper a img:hover
+{
+  transform: scale(5px);
+}
 ::-webkit-scrollbar /* Delete scrollbar */
 {
   display: none;
