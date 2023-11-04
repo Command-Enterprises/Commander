@@ -164,6 +164,7 @@ play: none;
 height: 150px
 width:150px
 transition:0.3sec
+border-radius: 10% 10% 10% 10%;
 }   
    
         #content a span {
