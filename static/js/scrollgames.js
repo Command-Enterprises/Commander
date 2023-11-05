@@ -6,7 +6,7 @@ const imageClasses = ['twoplayergames', 'btd5', 'trex', 'geodash', 'houseofhazar
 const imageTitles = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 let currentIndex = 0;
-const gamesPerPage = 3; // Change this to adjust the number of games per scroll
+const gamesPerPage = 1; // Change this to adjust the number of games per scroll
 
 function changeAttributes() {
     currentIndex += gamesPerPage;
