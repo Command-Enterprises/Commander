@@ -8,45 +8,31 @@ const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of
 let currentIndex = 0;
 const gamesPerPage = 3;
 
-function changeAttributes() 
-{
-    if (currentIndex + gamesPerPage < imageSources.length) 
-    {
+function changeAttributes() {
+    if (currentIndex + gamesPerPage < imageSources.length) {
         currentIndex += gamesPerPage;
-    } 
-    else 
-    {
+    } else {
         currentIndex = 0;
     }
 
-    image.style.opacity = 0;
-    image.style.transition = 'opacity 0.5s';
-
-    setTimeout(() => 
-    {
-        imageLink.href = imageLinks[currentIndex];
-        image.src = imageSources[currentIndex];
-        image.title = imageTitles[currentIndex];
-        image.className = imageClasses[currentIndex];
-        image.alt = imageAlts[currentIndex];
-        image.style.opacity = 1;
-    }, 500);
+    for (let i = 0; i < gamesPerPage; i++) {
+        setTimeout(() => {
+            imageLink.href = imageLinks[currentIndex + i];
+            image.src = imageSources[currentIndex + i];
+            image.title = imageTitles[currentIndex + i];
+            image.className = imageClasses[currentIndex + i];
+            image.alt = imageAlts[currentIndex + i];
+        }, i * 500);
+    }
 }
 
-window.addEventListener('wheel', (event) => 
-{
-    if (event.deltaY > 0) 
-    {
+window.addEventListener('wheel', (event) => {
+    if (event.deltaY > 0) {
         changeAttributes();
-    } 
-    else if (event.deltaY < 0) 
-    {
-        if (currentIndex - gamesPerPage >= 0) 
-        {
+    } else if (event.deltaY < 0) {
+        if (currentIndex - gamesPerPage >= 0) {
             currentIndex -= gamesPerPage;
-        } 
-        else 
-        {
+        } else {
             const remaining = imageSources.length % gamesPerPage;
             currentIndex = imageSources.length - remaining;
         }
