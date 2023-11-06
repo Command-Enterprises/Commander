@@ -9,12 +9,6 @@ let currentIndex = 0;
 const gamesPerPage = 3;
 
 function changeAttributes() {
-    if (currentIndex + gamesPerPage < imageSources.length) {
-        currentIndex += gamesPerPage;
-    } else {
-        currentIndex = 0;
-    }
-
     for (let i = 0; i < gamesPerPage; i++) {
         setTimeout(() => {
             imageLink.href = imageLinks[currentIndex + i];
@@ -24,15 +18,21 @@ function changeAttributes() {
             image.alt = imageAlts[currentIndex + i];
         }, i * 500);
     }
+
+    currentIndex += gamesPerPage;
+
+    if (currentIndex >= imageSources.length) {
+        currentIndex = 0;
+    }
 }
 
 window.addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
         changeAttributes();
     } else if (event.deltaY < 0) {
-        if (currentIndex - gamesPerPage >= 0) {
-            currentIndex -= gamesPerPage;
-        } else {
+        currentIndex -= gamesPerPage;
+
+        if (currentIndex < 0) {
             const remaining = imageSources.length % gamesPerPage;
             currentIndex = imageSources.length - remaining;
         }
