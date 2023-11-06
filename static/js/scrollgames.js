@@ -5,9 +5,8 @@ const imageSources = ['../assets/appicons/twoplayergames.svg', '../assets/appico
 const imageClasses = ['twoplayergames', 'btd5', 'trex', 'geodash', 'houseofhazards', 'janissarybattles', 'janissarytower', 'minigiants', 'motox3m', 'thepasswordgame', 'retrobowl', 'slopegame'];
 const imageTitles = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
-let currentIndex = 0;
+let currentIndex = 1; // Initialize with the first valid index
 
-// Adjust scroll sensitivity (smaller multiplier makes it less sensitive)
 const scrollSensitivity = 0.2;
 
 function changeAttributes() {
