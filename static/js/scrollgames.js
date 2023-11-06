@@ -5,7 +5,7 @@ const imageSources = ['../assets/appicons/twoplayergames.svg', '../assets/appico
 const imageClasses = ['twoplayergames', 'btd5', 'trex', 'geodash', 'houseofhazards', 'janissarybattles', 'janissarytower', 'minigiants', 'motox3m', 'thepasswordgame', 'retrobowl', 'slopegame'];
 const imageTitles = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
-let currentIndex = 1; // Initialize with the first valid index
+let currentIndex = 0;
 
 const scrollSensitivity = 0.2;
 
@@ -21,14 +21,14 @@ function changeAttributes() {
     image.style.opacity = 0;
     image.style.transition = 'opacity 0.5s';
 
-    setTimeout(() => {
+    if (imageSources[currentIndex] !== undefined) {
         imageLink.href = imageLinks[currentIndex];
         image.src = imageSources[currentIndex];
         image.title = imageTitles[currentIndex];
         image.className = imageClasses[currentIndex];
         image.alt = imageAlts[currentIndex];
         image.style.opacity = 1;
-    }, 500);
+    }
 }
 
 window.addEventListener('wheel', (event) => {
