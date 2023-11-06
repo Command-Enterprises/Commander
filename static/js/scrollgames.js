@@ -9,21 +9,22 @@ let currentIndex = 0;
 const gamesPerPage = 3;
 
 function changeAttributes() {
-    for (let i = 0; i < gamesPerPage; i++) {
-        setTimeout(() => {
-            imageLink.href = imageLinks[currentIndex + i];
-            image.src = imageSources[currentIndex + i];
-            image.title = imageTitles[currentIndex + i];
-            image.className = imageClasses[currentIndex + i];
-            image.alt = imageAlts[currentIndex + i];
-        }, i * 500);
-    }
-
     currentIndex += gamesPerPage;
 
     if (currentIndex >= imageSources.length) {
         currentIndex = 0;
     }
+
+    image.style.opacity = 0;
+    image.style.transition = 'opacity 0.5s'; // Add the transition property
+
+    setTimeout(() => {
+        image.src = imageSources[currentIndex];
+        image.title = imageTitles[currentIndex];
+        image.className = imageClasses[currentIndex];
+        image.alt = imageAlts[currentIndex];
+        image.style.opacity = 1;
+    }, 500);
 }
 
 window.addEventListener('wheel', (event) => {
