@@ -6,19 +6,19 @@ const imageClasses = ['twoplayergames', 'btd5', 'trex', 'geodash', 'houseofhazar
 const imageTitles = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 let currentIndex = 0;
-const gamesPerPage = 3;
 
 function changeAttributes() {
-    currentIndex += gamesPerPage;
-
+    currentIndex++;
+    
     if (currentIndex >= imageSources.length) {
         currentIndex = 0;
     }
 
     image.style.opacity = 0;
-    image.style.transition = 'opacity 0.5s'; // Add the transition property
+    image.style.transition = 'opacity 0.5s';
 
     setTimeout(() => {
+        imageLink.href = imageLinks[currentIndex];
         image.src = imageSources[currentIndex];
         image.title = imageTitles[currentIndex];
         image.className = imageClasses[currentIndex];
@@ -31,12 +31,12 @@ window.addEventListener('wheel', (event) => {
     if (event.deltaY > 0) {
         changeAttributes();
     } else if (event.deltaY < 0) {
-        currentIndex -= gamesPerPage;
-
+        currentIndex--;
+        
         if (currentIndex < 0) {
-            const remaining = imageSources.length % gamesPerPage;
-            currentIndex = imageSources.length - remaining;
+            currentIndex = imageSources.length - 1;
         }
+
         changeAttributes();
     }
 });
