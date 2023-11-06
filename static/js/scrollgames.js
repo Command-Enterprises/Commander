@@ -7,11 +7,16 @@ const imageTitles = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House 
 const imageAlts = ['Two Player Games', 'Bloons TD 5', 'Geometry Dash', 'House Of Hazards', 'Janissary Battles', 'Janissary Tower', 'Minigiants.io', 'Password Game', 'Retro Bowl', 'Slope Game'];
 let currentIndex = 0;
 
+// Adjust scroll sensitivity (smaller multiplier makes it less sensitive)
+const scrollSensitivity = 0.2;
+
 function changeAttributes() {
-    currentIndex++;
+    currentIndex += Math.sign(event.deltaY) * scrollSensitivity;
     
     if (currentIndex >= imageSources.length) {
         currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = imageSources.length - 1;
     }
 
     image.style.opacity = 0;
@@ -28,15 +33,5 @@ function changeAttributes() {
 }
 
 window.addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-        changeAttributes();
-    } else if (event.deltaY < 0) {
-        currentIndex--;
-        
-        if (currentIndex < 0) {
-            currentIndex = imageSources.length - 1;
-        }
-
-        changeAttributes();
-    }
+    changeAttributes();
 });
