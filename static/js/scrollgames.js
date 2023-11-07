@@ -72,7 +72,7 @@ let currentIndex = 0;
 
 const scrollSensitivity = 0.2;
 
-function changeAttributes() {
+function changeAttributes(event) { // Pass event as a parameter
   currentIndex += Math.sign(event.deltaY) * scrollSensitivity;
 
   if (currentIndex >= imageSources.length) {
@@ -92,6 +92,4 @@ function changeAttributes() {
   image.style.opacity = 1;
 }
 
-window.addEventListener('wheel', (event) => {
-  changeAttributes();
-});
+window.addEventListener('wheel', changeAttributes);
