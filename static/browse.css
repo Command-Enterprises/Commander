@@ -10,9 +10,7 @@ body
 {
 text-align: center;
   background: linear-gradient(to right, #43cea2, #185a9d); 
-  display: flex;
-            justify-content: center;
-            align-items: center;
+  display: grid;
             height: 100vh;
             margin: 0;
 }
@@ -47,6 +45,12 @@ div.header a h2.logo
   height: 35px;
   overflow: hidden;
   transition: 2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+form
+{
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
 }
 div.header a h2.logo:hover
 {
