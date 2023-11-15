@@ -234,3 +234,39 @@ div.games div.wrapper a img:hover
 {
   display: none;
 }
+.sidenav {
+            height: 100%;
+            width: 130px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+.gameimg{
+height: 150px
+width:150px
+transition:0.3sec
+}   
+    #content a span {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    border-radius: 10% 10% 10% 10%;
+    padding: 5px;
+    padding: 25px;
+    position: absolute;
+    bottom: 85; /* Position at the bottom of the container */
+    left: 55%;
+    transform: translateX(-50%);
+    transition: visibility 0.3s, opacity 0.3s;
+    opacity: 0;
+    z-index: 1;
+}
+        #content a:hover span {
+            visibility: visible;
+            opacity: 1;
+        }
