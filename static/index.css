@@ -33,7 +33,7 @@ div.sidenav
 }
 div.sidenav a
 {
-		color: rgba(252,252,252,0);
+		color: rgba(252,252,252,1);
 		text-align: center;
 		display: block;
 	    padding-top: 50px;
