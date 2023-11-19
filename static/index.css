@@ -21,6 +21,23 @@ div.header
   width: 100%;
   height: 20vh;
 }
+div.sidenav 
+{
+		margin-top: 20px;
+            z-index: -6;
+            opacity: 1;
+             background-color: rgba(0, 88, 140, 0.577);
+            width: 10%;
+            font-family: Inter, sans-serif;
+            padding-top: 10%;
+}
+div.sidenav a
+{
+		color: rgba(252,252,252,1);
+		text-align: center;
+		display: block;
+	    padding-top: 50px;
+}
 div.header a
 {
   text-decoration: none;
