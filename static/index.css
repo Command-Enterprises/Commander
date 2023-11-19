@@ -16,7 +16,7 @@ div.header
   align-items: center;
   justify-content: center;
   gap: 28px;
-  background-color: rgba(0, 139, 139, 0.577);
+  background-color: rgba(0, 88, 140, 0.577);
   backdrop-filter: blur(15px);
   width: 100%;
   height: 20vh;
