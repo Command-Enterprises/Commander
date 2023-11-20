@@ -16,5 +16,9 @@ CommanderProxy@cyber-wizard.com
 
 ### Feel free to contribute! Just go to the discussions tab! Also, you are welcome to reply to the hiring page!
 
+### Our ⭐(y) history:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Command-Enterprises/Commander&type=Date)](https://star-history.com/#Command-Enterprises/Commander&Date)
+
 ### Download here (We recommend forking):
 [![Download Commander](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/commanderproxy/files/latest/download) [![Download Commander](https://img.shields.io/sourceforge/dt/commanderproxy.svg)](https://sourceforge.net/projects/commanderproxy/files/latest/download)
