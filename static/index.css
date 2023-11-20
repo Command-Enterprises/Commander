@@ -281,7 +281,6 @@ transition:0.3sec
     padding: 25px;
     position: absolute;
     bottom: 85; /* Position at the bottom of the container */
-    left: 55%;
     transform: translateX(-50%);
     transition: visibility 0.3s, opacity 0.3s;
     opacity: 0;
