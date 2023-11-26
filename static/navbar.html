@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <div class="header">
-            <a href="index.html"><h2 class="logo">Commander</h2></a>
+            <a id="IndexNav2"href="index.html"><h2 class="logo">Commander</h2></a>
 
             <div class="container">
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="browse.html">Browse</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gitdis.html">Discussions</a></li>
+                    <li><a id="IndexNav" href="index.html">Home</a></li>
+                    <li><a id="GamesNav" href="games.html">Games</a></li>
+                    <li><a id="BrowseNav" href="browse.html">Browse</a></li>
+                    <li><a id="AboutNav" href="about.html">About</a></li>
+                    <li><a id="GitdisNav" href="gitdis.html">Discussions</a></li>
                 </ul>
             </div>
+		<script>
+			//if a page is located in the games folder, change the navbar links accordingly so it doesnt 404
+			if(window.location.pathname.substring(1,6)=="games"){
+				document.getElementById("IndexNav").href = "../index.html"
+				document.getElementById("IndexNav2").href = "../index.html"
+				document.getElementById("GamesNav").href = "../games.html"
+ 				document.getElementById("BrowseNav").href = "../browse.html"
+				document.getElementById("AboutNav").href = "../about.html"
+				document.getElementById("GitdisNav").href = "../gitdis.html"
+			}
         </div>
 </html>
