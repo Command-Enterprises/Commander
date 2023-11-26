@@ -15,7 +15,9 @@
 		<script>
 			//if a page is located in the games folder, change the navbar links accordingly so it doesnt 404
 			if(window.location.pathname.substring(1,6)=="games"){
+				console.log("it working")
 				document.getElementById("IndexNav").href = "../index.html"
+				console.log()
 				document.getElementById("IndexNav2").href = "../index.html"
 				document.getElementById("GamesNav").href = "../games.html"
  				document.getElementById("BrowseNav").href = "../browse.html"
