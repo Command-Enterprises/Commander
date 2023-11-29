@@ -1,7 +1,7 @@
-const game-links = document.querySelectorAll("#content>a");
-const game-links-spans = document.querySelectorAll("#conent>a>span");
-const game-searchbar = document.getElementById("search");
-const valid-que = /[a-zA-z0-9]*/gm;
+const game_links = document.querySelectorAll("#content>a");
+const game_links-spans = document.querySelectorAll("#conent>a>span");
+const game_searchbar = document.getElementById("search");
+const valid_que = /[a-zA-z0-9]*/gm;
 console.log("e");
 function arrayToString(fgh){
 	let y = "";
@@ -22,15 +22,15 @@ function doit(e){
 	let search = arrayToString(e.target.value.matchAll(valid-que));
 	console.log(search)
 	if(search!=""){
-	for(let jk = 0;jk<game-links;jk++){
+	for(let jk = 0;jk<game_links.length;jk++){
 		if(game-links-spans[jk].innerHTML.indexOf(search)==-1){
-			hide(game-links[jk]);
+			hide(game_links[jk]);
 		}
 	}
 	}else{
-		for(let jk = 0;jk<game-links;jk++){
-			show(game-links[jk])
+		for(let jk = 0;jk<game_links;jk++){
+			show(game_links[jk])
 		}
 	}
 }
-game-searchbar.addEventListener("input", doit);
+game_searchbar.addEventListener("input", doit);
