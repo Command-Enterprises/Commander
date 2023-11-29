@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href ="navbar.css">
         <script defer src="js/commits.js"></script>
         <script defer src="js/tabcloak.js"></script>
+	<script defer src="js/gamesearch.js"></script>
         <!--Google Fonts Links-->
 	
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
@@ -23,9 +24,19 @@
   		left:20%;
 		right:10%;
 	}
+	#search{
+		position: absolute;
+		padding: 4%;
+		margin-top: -40%
+	}
+	#searchtext{
+		text-align: center;
+		color: white;
+	}
     </style>
     </head>
     <body>
+		<script  src="js/gamesearch.js"></script>
         <div class="header">
             <a href="index.html"><h2 class="logo">Commander</h2></a>
             <div class="container">
@@ -39,6 +50,8 @@
             </div>
         </div>
 	 <div class="sidenav">
+	<p id="searchtext">Search</p>
+	<input type="text" id="search" >
         <a href="otherpages/multiplayergames.html">Multiplayer Games</a>
     </a>
         <a href="gungames.html">Shooting Games</a>
