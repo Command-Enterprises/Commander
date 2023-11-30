@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 const game_links = document.querySelectorAll("#content>a");
-const game_links_spans = document.querySelectorAll("#conent>a>span");
+const game_links_spans = document.querySelectorAll("#content>a>span");
 const game_searchbar = document.getElementById("search");
 const valid_que = /[a-zA-z0-9]*/gm;
 console.log("e");
