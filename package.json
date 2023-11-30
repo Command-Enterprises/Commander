@@ -8,7 +8,8 @@
     "build": "echo 'No build process required'"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysterium": "28.0.0"
   },
   "devDependencies": {},
   "keywords": [],
