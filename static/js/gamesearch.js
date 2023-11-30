@@ -15,7 +15,7 @@ function hide(elem){
 	elem.style.position = "absolute"
 	elem.style.visibility = "hidden"
 }
-function show(){	
+function show(elem){	
 	elem.style.position = "static"
 	elem.style.visibility = "visible"
 }
