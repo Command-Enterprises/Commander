@@ -10,6 +10,9 @@ body
 {
   background: linear-gradient(to right, #43cea2, #185a9d); 
 }
+.searchgames{
+color: red;
+}
 div.header
 {
   display: flex;
