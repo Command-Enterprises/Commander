@@ -1,3 +1,4 @@
+window.addEventListener(""DOMContentLoaded", (event) => {
 const game_links = document.querySelectorAll("#content>a");
 const game_links_spans = document.querySelectorAll("#conent>a>span");
 const game_searchbar = document.getElementById("search");
@@ -34,3 +35,4 @@ function doit(e){
 	}
 }
 game_searchbar.addEventListener("input", doit);
+});
