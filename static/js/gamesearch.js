@@ -24,7 +24,7 @@ function doit(e){
 	console.log(search)
 	if(search!=""){
 	for(let jk = 0;jk<game_links.length;jk++){
-		if(game-links-spans[jk].innerHTML.indexOf(search)==-1){
+		if(game_links_spans[jk].innerHTML.indexOf(search)==-1){
 			hide(game_links[jk]);
 		}
 	}
