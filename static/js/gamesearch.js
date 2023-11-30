@@ -20,7 +20,7 @@ function show(){
 	elem.style.visibility = "visible"
 }
 function doit(e){
-	let search = arrayToString(e.target.value.matchAll(valid-que));
+	let search = arrayToString(e.target.value.matchAll(valid_que));
 	console.log(search)
 	if(search!=""){
 	for(let jk = 0;jk<game_links.length;jk++){
