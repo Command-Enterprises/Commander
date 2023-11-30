@@ -29,7 +29,7 @@ function doit(e){
 		}
 	}
 	}else{
-		for(let jk = 0;jk<game_links;jk++){
+		for(let jk = 0;jk<game_links.length;jk++){
 			show(game_links[jk])
 		}
 	}
