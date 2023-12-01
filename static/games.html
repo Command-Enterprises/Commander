@@ -37,18 +37,16 @@
     </head>
     <body>
 		<script  src="js/gamesearch.js"></script>
-        <div class="header">
-            <a href="index.html"><h2 class="logo">Commander</h2></a>
-            <div class="container">
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="browse.html">Browse</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gitdis.html">Discussions</a></li>
-                </ul>
-            </div>
-        </div>
+	    <script>
+		    //use the navabr fetch script, like every part of the site should!
+    	fetch('navbar.html')
+        	.then(response => response.text())
+        	.then(data => {
+            		document.getElementById('content').innerHTML = data;
+        	})
+        	.catch(error => console.error(error));
+
+	    </script>
 	 <div class="sidenav">
 	<p id="searchtext">Search</p>
 	<input type="text" id="search" class="searchgames" placeholder="Search for games"> >
