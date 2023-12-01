@@ -1,0 +1,46 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check if Cargo.toml exists
+      id: check-cargo
+      run: |
+        if [ -f Cargo.toml ]; then
+          echo "Cargo.toml exists. Skipping initialization."
+          echo "project_initialized=true" >> $GITHUB_ENV
+        else
+          echo "Cargo.toml does not exist. Need to initialize the project."
+          echo "project_initialized=false" >> $GITHUB_ENV
+        fi
+
+    - name: Initialize Rust project
+      if: env.project_initialized == 'false'
+      run: |
+        cargo init --vcs none .
+        git add .
+        git config --global user.name 'Quartinal'
+        git config --global user.email 'prehistorical.dinosaurs@outlook.com'
+        git commit -m "Initial commit with cargo init"
+        git push
+
+    - name: Install Rust
+      uses: actions-rust-lang/setup-rust-toolchain@v1
+      with:
+        toolchain: stable
+
+    - name: Build
+      run: cargo build --verbose
+
+    - name: Run tests
+      run: cargo test --verbose
