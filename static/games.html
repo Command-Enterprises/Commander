@@ -32,6 +32,9 @@
 		text-align: center;
 		color: white;
 	}
+	 #games{
+		 position:absolute;
+	 }   
     </style>
     </head>
     <body>
@@ -42,7 +45,7 @@
         	.then(response => response.text())
         	.then(data => {
 			//append navbar to innerhtml to make sure the games dont get wiped
-            		document.getElementById('content').innerHTML = document.getElementById('content').innerHTML + data;
+            		document.getElementById('content').innerHTML = data + document.getElementById('content').innerHTML;
         	})
         	.catch(error => console.error(error));
 
@@ -57,6 +60,7 @@
         <a href="sportsgames.html">Sports Games</a>
        </div>
 	    <div id="content">
+	<div id="games">
         <a href="games/btd5.html">
             <img src="assets/appicons/btd5.svg" alt="Bloons TD 5">
             <span>Bloons TD 5</span>
@@ -96,6 +100,8 @@
 	<a href="games/slopegame.html">
 		<img src="assets/appicons/slopegame.svg" alt="Slope">
 		<span>Slope</span>
+	</a>
+	</div>
 	    </div>		    
     </body>
 </html>
