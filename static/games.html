@@ -20,7 +20,6 @@
             border-radius: 10% 10% 10% 10%;
         }
 	#content {
-		position:absolute;
   		left:20%;
 		right:10%;
 	}
@@ -42,7 +41,8 @@
     	fetch('navbar.html')
         	.then(response => response.text())
         	.then(data => {
-            		document.getElementById('content').innerHTML = data;
+			//append navbar to innerhtml to make sure the games dont get wiped
+            		document.getElementById('content').innerHTML = document.getElementById('content').innerHTML + data;
         	})
         	.catch(error => console.error(error));
 
