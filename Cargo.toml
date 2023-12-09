@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 wasm-pack = "0.12.1"
+wasm-bindgen = "0.2.89"
