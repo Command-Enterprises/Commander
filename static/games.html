@@ -45,69 +45,55 @@
     </head>
     <body>
 		<script  src="js/gamesearch.js"></script>
-	    <script>
-		    //use the navabr fetch script, like every part of the site should!
-    	fetch('navbar.html')
-        	.then(response => response.text())
-        	.then(data => {
-			//append navbar to innerhtml to make sure the games dont get wiped
-            		document.getElementById('content').innerHTML = data + document.getElementById('content').innerHTML;
-        	})
-        	.catch(error => console.error(error));
-
-	    </script>
-	 <div class="sidenav">
-	<p id="searchtext">Search</p>
-	<input type="text" id="search" class="searchgames" placeholder="Search for games"> >
-        <a href="otherpages/multiplayergames.html">Multiplayer Games</a>
-    </a>
-        <a href="gungames.html">Shooting Games</a>
-    </a>
-        <a href="sportsgames.html">Sports Games</a>
-       </div>
+	 	<div class="sidenav">
+			<p id="searchtext">Search</p>
+			<input type="text" id="search" class="searchgames" placeholder="Search for games"> >
+        	<a href="otherpages/multiplayergames.html">Multiplayer Games</a>
+        	<a href="gungames.html">Shooting Games</a>
+        	<a href="sportsgames.html">Sports Games</a>
+       	</div>
 	    <div id="content">
-	<div id="games">
-        <a href="games/btd5.html">
-            <img src="assets/appicons/btd5.svg" alt="Bloons TD 5">
-            <span>Bloons TD 5</span>
-	</a>
-	<a href="games/dinogame.html">
-		<img src="assets/appicons/dinogame.png" alt="Dino Game">
-		<span>Chrome Dino Game</span>
-	</a>
-	<a href="games/geodash.html">
-		<img src="assets/appicons/geodash.svg" alt="Geometry Dash">
-		<span>Geometry Dash</span>
-	</a>
-        <a href="games/houseofhazards.html">
-		<img src="assets/appicons/houseofhazards.svg" alt="House of Hazards">
-		<span>House of Hazards</span>
-	</a>
-	<a href="games/janissarybattles.html">
-		<img src="assets/appicons/janissarybattles.jpeg" alt="Janissary Battles">
-		<span>Janissary Battles</span>
-	</a>
-	<a href="games/janissarytower.html">
-		<img src="assets/appicons/janissarytower.svg" alt="Janissary Tower">
-		<span>Janissary Tower</span>
-	</a>
-	<a href="games/minigiants.html">
-		<img src="assets/appicons/minigiants.svg" alt="Minigiants.io">
-		<span>Minigiants.io</span>
-	</a>
-	<a href="games/motox3m.html">
-		<img src="assets/appicons/motox3m.svg" alt="Moto X3M">
-		<span>Moto X3M</span>
-	</a>
-	<a href="games/passwordgame.html">
-		<img src="assets/appicons/thepasswordgame.png" alt="The Password Game">
-		<span>The Password Game</span>
-	</a>
-	<a href="games/slopegame.html">
-		<img src="assets/appicons/slopegame.svg" alt="Slope">
-		<span>Slope</span>
-	</a>
-	</div>
-	    </div>		    
+			<div id="games">
+        	<a href="games/btd5.html">
+            	<img src="assets/appicons/btd5.svg" alt="Bloons TD 5">
+           		<span>Bloons TD 5</span>
+			</a>
+			<a href="games/dinogame.html">
+				<img src="assets/appicons/dinogame.png" alt="Dino Game">
+				<span>Chrome Dino Game</span>
+			</a>
+			<a href="games/geodash.html">
+				<img src="assets/appicons/geodash.svg" alt="Geometry Dash">
+				<span>Geometry Dash</span>
+			</a>
+			<a href="games/houseofhazards.html">
+				<img src="assets/appicons/houseofhazards.svg" alt="House of Hazards">
+				<span>House of Hazards</span>
+			</a>
+			<a href="games/janissarybattles.html">
+				<img src="assets/appicons/janissarybattles.jpeg" alt="Janissary Battles">
+				<span>Janissary Battles</span>
+			</a>
+			<a href="games/janissarytower.html">
+				<img src="assets/appicons/janissarytower.svg" alt="Janissary Tower">
+				<span>Janissary Tower</span>
+			</a>
+			<a href="games/minigiants.html">
+				<img src="assets/appicons/minigiants.svg" alt="Minigiants.io">
+				<span>Minigiants.io</span>
+			</a>
+			<a href="games/motox3m.html">
+				<img src="assets/appicons/motox3m.svg" alt="Moto X3M">
+				<span>Moto X3M</span>
+			</a>
+			<a href="games/passwordgame.html">
+				<img src="assets/appicons/thepasswordgame.png" alt="The Password Game">
+				<span>The Password Game</span>
+			</a>
+			<a href="games/slopegame.html">
+				<img src="assets/appicons/slopegame.svg" alt="Slope">
+				<span>Slope</span>
+			</a>
+		</div>	    
     </body>
 </html>
