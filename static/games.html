@@ -14,28 +14,33 @@
 	
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     <style>
-        #content a img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10% 10% 10% 10%;
-        }
-	#content {
-  		left:20%;
-		right:10%;
+        #content {
+	  margin-left: 20%;
+	  margin-right: 10%;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center; /* Centers the items on the page (better for responsiveness) */
 	}
-	#search{
-		position: absolute;
-		padding: 4%;
-		margin-top: -40%
+	
+	#games {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates a responsive grid layout */
+	  grid-gap: 10px;
+	  padding-left: 0; /* Removes unnecessary padding if using grid */
 	}
-	#searchtext{
-		text-align: center;
-		color: white;
+	
+	#search {
+	  position: relative; /* Changed from absolute to relative */
+	  padding: 1%;
+	  margin-top: 10px; /* Adjusted margin to not overlap other content */
+	  width: 100%; /* Ensures input does not overflow its container */
 	}
-	 #games{
-		 position:absolute;
-		 padding-left:15%;
-	 }   
+	
+	#searchtext {
+	  text-align: center;
+	  color: white;
+	  padding: 10px 0; /* Adds some space above and below the text */
+	}   
     </style>
     </head>
     <body>
