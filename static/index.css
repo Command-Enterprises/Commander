@@ -298,6 +298,7 @@ div.games div.wrapper a img:hover
   border: 3px solid transparent;
   display: block;
   margin: 15px;
+  flex-direction: row;
 }
 
 .game-card:hover {
