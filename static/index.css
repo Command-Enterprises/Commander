@@ -326,6 +326,7 @@ div.games div.wrapper a img:hover
   height: auto;
   bottom: 0;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  flex-direction: row;
 }
 
 .game-card .title {
