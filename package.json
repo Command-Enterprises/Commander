@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysterium-vpn-js": "28.0.0",
-    "axios": "1.6.2",
+    "axios": "1.6.4",
     "coffeescript": "2.7.0"
   },
   "devDependencies": {},
