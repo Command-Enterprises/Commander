@@ -1,0 +1,14 @@
+{
+    "name": "commander-backend",
+    "version": "1.0.0",
+    "description": "the proxy part of commander proxy!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "proxy"
+    ],
+    "author": "sequoia haynes","jasper quartolo"
+    "license": "MIT"
+}
