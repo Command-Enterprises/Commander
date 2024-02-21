@@ -1,24 +1,24 @@
 body {
-   margin: 0;
-    font-family: Inter, sans-serif;
+  margin: 0;
+  font-family: Inter, sans-serif;
   background:white
 }
 .sidenav {
-            height: 100%;
-            width: 130px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #ffffff;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
+  height: 100%;
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
 .navtext{
    animation-name: navtext-animation
 }
 @keyframes navtext-animation{
-   from {
+  from {
     color: purple;
   }
   25% {
@@ -34,48 +34,45 @@ body {
     color: yellow;
   }
 }
-      
-      
-        .sidenav a {
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #818181;
-            display: block;
-        }
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-        #content {
-            margin-left: 150px;
-            padding: 15px;
-        }
-        #loaded-content {
-            float: left;
-        }
-.gameimg{
-height: 150px;
-width:150px;
-transition:0.3sec
-}   
-   
-        #content a span {
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    border-radius: 10% 10% 10% 10%;
-    padding: 5px;
-    padding: 25px;
-    position: absolute;
-    bottom: 85; /* Position at the bottom of the container */
-    left: 55%;
-    transform: translateX(-50%);
-    transition: visibility 0.3s, opacity 0.3s;
-    opacity: 0;
-    z-index: 1;
+.sidenav a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
 }
-        #content a:hover span {
-            visibility: visible;
-            opacity: 1;
-        }
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+#content {
+  margin-left: 150px;
+  padding: 15px;
+}
+#loaded-content {
+  float: left;
+}
+.gameimg {
+  height: 150px;
+  width:150px;
+  transition:0.3sec
+}
+#content a span {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  border-radius: 10% 10% 10% 10%;
+  padding: 5px;
+  padding: 25px;
+  position: absolute;
+  bottom: 85; /* Position at the bottom of the container */
+  left: 55%;
+  transform: translateX(-50%);
+  transition: visibility 0.3s, opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+}
+#content a:hover span {
+    visibility: visible;
+    opacity: 1;
+}
