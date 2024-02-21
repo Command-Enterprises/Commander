@@ -8,15 +8,16 @@
 html,
 body
 {
-text-align: center;
+  text-align: center;
   background: linear-gradient(to right, #43cea2, #185a9d); 
   display: grid;
-            height: 100vh;
-            margin: 0;
+  height: 100vh;
+  margin: 0;
 }
-        #targetUrl {
-            width: 300px; /* Adjust the width as needed */
-        }          
+#targetUrl 
+{
+  width: 300px; /* Adjust the width as needed */
+}          
 div.header
 {
   display: flex;
