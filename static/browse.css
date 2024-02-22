@@ -5,15 +5,6 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
-html,
-body
-{
-  text-align: center;
-  background: linear-gradient(to right, #43cea2, #185a9d); 
-  display: grid;
-  height: 100vh;
-  margin: 0;
-}
 #targetUrl 
 {
   width: 300px; /* Adjust the width as needed */
