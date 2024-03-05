@@ -1,5 +1,8 @@
 # Commander
 The future. Commander Proxy.
+
+#### Note: a new open-source proxy is available that will be the new Commander in a couple of months: https://github.com/Quartinal/CivilBackend
+
 ***
 ### If you need help or want to suggest something, please go to [the discussions tab](https://github.com/Command-Enterprises/Commander/discussions).
 ### Socials:
