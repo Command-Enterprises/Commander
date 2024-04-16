@@ -23,3 +23,5 @@ CommanderProxy@cyber-wizard.com
 
 ### Download here (We recommend forking):
 [![Download Commander](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/commanderproxy/files/latest/download) [![Download Commander](https://img.shields.io/sourceforge/dt/commanderproxy.svg)](https://sourceforge.net/projects/commanderproxy/files/latest/download)
+
+Also, a thank you to @binary-person for the Rammerhead Proxy that powers Commander.
