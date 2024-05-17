@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Google Docs</title>
         <link rel="stylesheet" type="text/css" href="index.css">
-	<link rel="stylesheet" type="text/css" href ="navbar.css">
+	      <link rel="stylesheet" type="text/css" href ="navbar.css">
         <script defer src="js/commits.js"></script>
         <script defer src="js/tabcloak.js"></script>
 	<script defer src="js/gamesearch.js"></script>
@@ -41,6 +41,8 @@
     <body>
 		<script  src="js/gamesearch.js"></script>
 	    <script>
+			const dive = document.createElement("div")
+const anchor = document.getElementById("anch")
 		    //use the navabr fetch script, like every part of the site should!
     	fetch('navbar.html')
         	.then(response => response.text())
@@ -51,67 +53,32 @@
         	.catch(error => console.error(error));
 
 	    </script>
-	 <div class="sidenav">
-	<p id="searchtext">Search</p>
-	<input type="text" id="search" class="searchgames" placeholder="Search for games"> >
-        <a href="otherpages/multiplayergames.html">Multiplayer Games</a>
-    </a>
-        <a href="gungames.html">Shooting Games</a>
-    </a>
-        <a href="sportsgames.html">Sports Games</a>
-       </div>
-	    <div id="content">
-       <div class="game-card">
-        <a href="games/btd5.html">
-            <img src="assets/appicons/btd5.svg" alt="Bloons TD 5">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/dinogame.html">
-		<img src="assets/appicons/dinogame.png" alt="Dino Game">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/geodash.html">
-		<img src="assets/appicons/geodash.svg" alt="Geometry Dash">
-		</div>
-	</a>
-       <div class="game-card">
-        <a href="games/houseofhazards.html">
-		<img src="assets/appicons/houseofhazards.svg" alt="House of Hazards">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/janissarybattles.html">
-		<img src="assets/appicons/janissarybattles.jpeg" alt="Janissary Battles">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/janissarytower.html">
-		<img src="assets/appicons/janissarytower.svg" alt="Janissary Tower">
-		</div>
-	</a>
-       <div class="game-card">     
-	<a href="games/minigiants.html">
-		<img src="assets/appicons/minigiants.svg" alt="Minigiants.io">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/motox3m.html">
-		<img src="assets/appicons/motox3m.svg" alt="Moto X3M">
-		</div>
-	</a>
-       <div class="game-card">
-	<a href="games/passwordgame.html">
-		<img src="assets/appicons/thepasswordgame.png" alt="The Password Game">
-       </div>
-	</a>
-      <div class="game-card">
-	<a href="games/slopegame.html">
-		<img src="assets/appicons/slopegame.svg" alt="Slope">
-      </div>
-	</a>
-	</div>
-	    </div>		    
+		<script> 
+		function textBoxerinator(text) {
+    return text.substring(1, text.length/2) + '\n' + text.substring(text.length/2, text.length)
+  }
+  function px2vw(pxs) {
+    return 100 * pxs / screen.availWidth
+  }
+  function wipe() {
+  document.removeChild(document.documentElement);
+  for (let gh=0; elems.length > gh; gh++) {
+    elems.pop()
+  }
+  function pushCrapToDOM() {
+    console.log(elems.length)
+    for (let m=0;  elems.length > m; m++) {
+      dive.appendChild(elems[m]);
+    }
+    document.body.insertBefore(dive, anchor);
+    console.log(dive)
+    console.log(anchor + "hoh")
+    console.log("workin")
+  };
+  var elems = new Array();
+  //when adding new games be sure to create an entry for them in the games.json file
+  
+		</script>
+		<div id="anch"></div>
     </body>
 </html>
