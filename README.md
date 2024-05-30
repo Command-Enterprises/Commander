@@ -1,5 +1,5 @@
 # Commander
-The past. Commander Proxy.
+The road ahead. Commander Proxy LTS.
 
 ***
 ### If you need help or want to suggest something, please go to [the discussions tab](https://github.com/Command-Enterprises/Commander/discussions).
