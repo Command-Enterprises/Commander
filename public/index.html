@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0"
+        >
+        <meta 
+            http-equiv="X-UA-Compatible" 
+            content="IE=edge"
+        >
+        <title>Canvas</title>
+        <link
+            rel="preconnect" 
+            href="https://fonts.googleapis.com"
+        >
+        <link 
+            rel="preconnect" 
+            href="https://fonts.gstatic.com" 
+            crossorigin
+        >
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+            rel="stylesheet"
+        >
+        <script 
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico"
+        >
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                &::-webkit-scrollbar
+                {
+                    display: none;
+                }
+            }
+            body
+            {
+                background-color: #232324;
+                height: 100%;
+                .globalContainer
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 38px;
+                    padding: 12px;
+                    background-color: transparent;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 100vh; /* USE THIS! It is far 
+                                    more reliable and physically
+                                    functions much better
+                                    than '100%' */
+                    .card
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 16px;
+                        background-color: #2e2e2e99;
+                        backdrop-filter: blur(10px);
+                        border-radius: 35px;
+                        width: 24%;
+                        height: 20%;
+                        & .text
+                        {
+                            display: flex;
+                            gap: 6px;
+                            color: #f4f3f2;
+                            font-size: 32px;
+                            font-weight: 600;
+                            font-family: 'Poppins', sans-serif;
+                            cursor: default;
+                            user-select: none;
+                            & span
+                            {
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+                        }
+                        & p
+                        {
+                            color: #f4f3f2;
+                            font-size: 14px;
+                            font-weight: 400;
+                            font-family: 'Poppins', sans-serif;
+                            cursor: default;
+                            user-select: none;
+                            & .suppressionText
+                            {
+                                color: #b5d6f3;
+                            }
+                            & .bold
+                            {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    img
+                    {
+                        position: absolute;
+                        top: 19.75%;
+                        left: 49.68%;
+                        width: 176px;
+                        height: 88px;
+                        z-index: 3;
+                        transform: rotate(2.5deg);
+                    }
+                    .container
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 32px;
+                        background-color: #11133180;
+                        backdrop-filter: blur(10px);
+                        border: 2.75px solid #f1f2f3;
+                        border-radius: 28px;
+                        width: 89%;
+                        height: 63%;
+                        .icons
+                        {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 18px;
+                            background-color: #121b25a9;
+                            border: 2.25px solid #f2f3f4;
+                            border-radius: 35px;
+                            width: 55%;
+                            height: 17.5%;
+                            ion-icon
+                            {
+                                color: #f1f1f1;
+                                width: 25px;
+                                height: 25px;
+                                transition: 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+                                &[name="home-outline"]:hover
+                                {
+                                    color: #f59e9e;
+                                    transform: scale(+1.15);
+                                }
+                                &[name="game-controller-outline"]:hover
+                                {
+                                    color: #7fffd4;
+                                }
+                                &[name="apps-outline"]:hover
+                                {
+                                    color: #b5d6f3;
+                                    transform: scale(0.85);
+                                }
+                                &[name="terminal-outline"]:hover
+                                {
+                                    color: #7af8ab;
+                                    transform: translate(-5%, 0);
+                                }
+                                &[name="mic-outline"]
+                                {
+                                    transition: 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+                                    &:hover
+                                    {
+                                        color: #50c6ee;
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                                &[name="chatbox-ellipses-outline"]
+                                {
+                                    transition: 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+                                    &:hover
+                                    {
+                                        color: #61eeee;
+                                        transform: scale(+0.80);
+                                    }
+                                }
+                                &[name="mail-outline"]:hover
+                                {
+                                    color: #39dfdf;
+                                    transform: rotate(-24deg);
+                                }
+                                &[name="settings-outline"]
+                                {
+                                    transition: 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+                                    &:hover
+                                    {
+                                        color: #f1c49a;
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                            hr
+                            {
+                                background: url('./images/nav-divider.svg');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                border: none;
+                                width: 20px;
+                                height: 20px;
+                                transform: rotate(-90deg);
+                            }
+                        }
+                        .searchSection
+                        {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 16px;
+                            background-color: transparent;
+                            width: 56%;
+                            height: 29.95%;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+                            & .urlInput
+                            {
+                                padding-left: 13px;
+                                background-color: #b5d6f3;
+                                border: none;
+                                outline: none;
+                                border-radius: 35px;
+                                color: #232324;
+                                font-size: 13px;
+                                font-weight: 700;
+                                font-family: 'Poppins', sans-serif;
+                                width: 52%;
+                                height: 28%;
+                                transition: 0.15s cubic-bezier(0.86, 0, 0.07, 1);
+                                &::placeholder
+                                {
+                                    color: #232324;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    font-family: 'Poppins', sans-serif;
+                                }
+                            }
+                            & h2
+                            {
+                                text-decoration: none;
+                                color: #e3f3ca;
+                                font-size: 22px;
+                                font-weight: 300;
+                                font-family: 'Poppins', sans-serif;
+                                cursor: pointer;
+                                user-select: none;
+                                &:hover
+                                {
+                                    text-decoration: underline;
+                                    text-decoration-thickness: 0.9px;
+                                    text-decoration-skip: none;
+                                }
+                            }
+                        }
+                        .exploitsSection
+                        {
+                            display: none;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 16px;
+                            background-color: #05101da9;
+                            width: 85%;
+                            height: 45%;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+                        }
+                        .sectionsContainer
+                        {
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            width: 85%;
+                            height: 45%;
+                            transition: 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+                            .settingsSection
+                            {
+                                display: none;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 18px;
+                                background-color: #121b25a9;
+                                opacity: 0;
+                                border: 2.25px solid #f2f3f4;
+                                border-radius: 35px;
+                                width: 100%;
+                                height: 100%;
+                                & .searchEngine
+                                {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 12px;
+                                    background-color: #05101da9;
+                                    border: 1.14px solid #f3f4f2;
+                                    border-radius: 25px;
+                                    width: 34%;
+                                    height: 89%;
+                                    & label
+                                    {
+                                        color: #f4f3f2;
+                                        font-size: 28px;
+                                        font-weight: 500;
+                                        font-family: 'Poppins', sans-serif;
+                                        cursor: help;
+                                    }
+                                    & input[type="text"]
+                                    {
+                                        padding-left: 13px;
+                                        background-color: #b5d6f3;
+                                        border: none;
+                                        outline: none;
+                                        border-radius: 35px;
+                                        color: #232324;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        font-family: 'Poppins', sans-serif;
+                                        width: 94%;
+                                        height: 32%;
+                                        &::placeholder
+                                        {
+                                            color: #232324;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                    }
+                                }
+                                & .proxyToUse
+                                {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 12px;
+                                    background-color: #05101da9;
+                                    border: 1.14px solid #f3f4f2;
+                                    border-radius: 25px;
+                                    width: 15%;
+                                    height: 89%;
+                                    & button
+                                    {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-align: center;
+                                        padding: 5px;
+                                        background-color: #3433;
+                                        border: 0.5px solid #f4f5f6;
+                                        border-radius: 35px;
+                                        color: #7af8ab;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        font-family: 'Poppins', sans-serif;
+                                        width: 81%;
+                                        height: 32%;
+                                        overflow: hidden;
+                                        cursor: default;
+                                    }
+                                }
+                                & .cloakingToUse
+                                {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 7px;
+                                    padding: 12px;
+                                    background-color: #05101da9;
+                                    border: 1.14px solid #f3f4f2;
+                                    border-radius: 25px;
+                                    width: 45%;
+                                    height: 89%;
+                                    & label
+                                    {
+                                        color: #f4f3f2;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        font-family: 'Poppins', sans-serif;
+                                        cursor: help;
+                                    }
+                                    & input[type="text"]
+                                    {
+                                        padding-left: 13px;
+                                        background-color: #b5d6f3;
+                                        border: none;
+                                        outline: none;
+                                        border-radius: 35px;
+                                        color: #232324;
+                                        font-size: 13px;
+                                        font-weight: 700;
+                                        font-family: 'Poppins', sans-serif;
+                                        width: 92%;
+                                        height: 24%;
+                                        transition: 0.15s cubic-bezier(0.86, 0, 0.07, 1);
+                                        &::placeholder
+                                        {
+                                            color: #232324;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                    }
+                                }
+                            }
+                            .terminalSection
+                            {
+                                display: none;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 18px;
+                                background-color: #121b25a9;
+                                opacity: 0;
+                                border: 2.25px solid #f2f3f4;
+                                border-radius: 35px;
+                                width: 100%;
+                                height: 100%;
+                                overflow-x: hidden;
+                                overflow-y: scroll;
+                                & input
+                                {
+                                    text-align: start;
+                                    padding: 14px;
+                                    background-color: transparent;
+                                    border: none;
+                                    outline: none;
+                                    border-radius: 35px;
+                                    color: #b5d6f3;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    font-family: 'Poppins', sans-serif;
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow-x: hidden;
+                                    &::placeholder
+                                    {
+                                        color: #b5d6f3;
+                                        font-size: 18px;
+                                        font-weight: 400;
+                                        font-family: 'Poppins', sans-serif;
+                                    }
+                                }
+                                & .suggestion
+                                {
+                                    position: relative;
+                                    top: 0;
+                                    right: 75%;
+                                    color: #848586;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    font-family: 'Poppins', sans-serif;
+                                    width: 20%;
+                                    height: 20%;
+                                    cursor: default;
+                                    user-select: none;
+                                }
+                            }
+                            .voiceSearchSection
+                            {
+                                display: none;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 18px;
+                                background-color: #121b25a9;
+                                border: 2.25px solid #f2f3f4;
+                                border-radius: 35px;
+                                width: 100%;
+                                height: 100%;
+                                overflow-x: hidden;
+                                overflow-y: scroll;
+                                & .startButton
+                                {
+                                    display: block;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                    padding: 5px;
+                                    background-color: #3433;
+                                    border: 0.5px solid #f4f5f6;
+                                    border-radius: 35px;
+                                    color: #7af8ab;
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                    font-family: 'Poppins', sans-serif;
+                                    width: 12%;
+                                    height: 32%;
+                                    overflow: hidden;
+                                    cursor: default;
+                                }
+                            }
+                        }
+                    }
+                    .particles-js-canvas-el
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="globalContainer" id="particlesJS">
+            <div class="card">
+                <h2 class="text">Commander<span>LTS</span></h2>
+                <p>Elude <span class="suppressionText">suppression</span> from <span class="bold">cyberspace</span></p>
+            </div>
+
+            <img 
+                src="./images/wave.svg" 
+                width="200px" height="100px" 
+                oncontextmenu="return false;"
+            >
+
+            <div class="container">
+                <div class="icons">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="game-controller-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="apps-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="terminal-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="mic-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <hr class="slash">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+
+                <div class="searchSection">
+                    <input
+                        type="text"
+                        class="urlInput"
+                        id="urlInput"
+                        placeholder="Search"
+                    >
+                    <h2>Exploits</h2>
+                    <h2>Bookmarklets</h2>
+                </div>
+
+                <div class="exploitsSection">
+                    <div class="aatfu">
+                        <div class="imageContainer">
+                            <img src="./images/aatfu.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sectionsContainer">
+                    <div class="settingsSection">
+                        <div class="searchEngine">
+                            <label 
+                                for="searchEngineInput" 
+                                title="Set your search engine!"
+                            >
+                            Search engine
+                            </label>
+                            <input 
+                                type="text" 
+                                class="searchEngineInput" 
+                                id="searchEngineInput" 
+                                value="https://www.google.com/search?q="
+                                placeholder="Search engine prefix"
+                                spellcheck="false"
+                            >
+                        </div>
+    
+                        <div class="proxyToUse">
+                            <button class="promptButton">Select a proxy</button>
+                        </div>
+    
+                        <div class="cloakingToUse">
+                            <label 
+                                for="faviconInput" 
+                                title="Set the favicon!"
+                            >
+                            Favicon (use https URL)
+                            </label>
+                            <input
+                                type="text"
+                                class="faviconInput"
+                                id="faviconInput"
+                                value="Canvas (default icon)"
+                                placeholder="Favicon (use https URL)"
+                                spellcheck="false"
+                            >
+                            <label
+                                for="titleInput"
+                                title="Set the page title!"
+                            >
+                            Page title
+                            </label>
+                            <input
+                                type="text"
+                                class="titleInput"
+                                id="titleInput"
+                                value="Canvas (default title)"
+                                placeholder="Page title"
+                                spellcheck="false"
+                            >
+                        </div>
+                    </div>
+    
+                    <div class="terminalSection">
+                        <input type="text">
+                        <span class="suggestion"></span>
+                    </div>
+
+                    <div class="voiceSearchSection">
+                        <button class="startButton">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            type="text/javascript"
+        >
+            $(
+                document
+            ).ready(function() {
+                let isVisible = true;
+
+                $(
+                    'body .globalContainer .container .icons ion-icon[name="mic-outline"]'
+                ).on('click', function() {
+                    isVisible = !isVisible;
+
+                    $(
+                        'body .globalContainer .container .searchSection'
+                    ).css(
+                        isVisible ? {
+                            display: 'none'
+                        } : {
+                            display: 'flex'
+                        }
+                    );
+
+                    if (isVisible) {
+                        $(
+                            'body .globalContainer .container .sectionsContainer div'
+                        ).not('.voiceSearchSection, .voiceSearchSection *').hide();
+                    }
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .voiceSearchSection, body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .voiceSearchSection *'
+                    ).css(
+                        isVisible ? {
+                            display: 'flex'
+                        } : {
+                            display: 'none'
+                        }
+                    );
+
+                    $(
+                        'body .globalContainer .container .icons ion-icon[name="mic-outline"]:hover'
+                    ).css(
+                        isVisible ? {
+                            transform: 'none'
+                        } : {
+                            transform: 'rotate(360deg)'
+                        }
+                    );
+
+                    if (
+                        $(
+                            'body .globalContainer .container .sectionsContainer .voiceSearchSection .startButton'
+                        ).text() ===
+                        'Start'
+                    ) {
+                        const recognition = new SpeechRecognition();
+
+                        recognition.lang = 'en-US';
+
+                        
+                    }
+                });
+
+                $(
+                    'body .globalContainer .container .sectionsContainer .voiceSearchSection .startButton'
+                ).on('click', function() {
+                    isVisible = !isVisible;
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer .voiceSearchSection .startButton'
+                    ).text(
+                        isVisible ? 
+                        'Stop' : 
+                        'Start'
+                    );
+                });
+            });
+        </script>
+
+        <script
+            type="text/javascript"
+        >
+            $(
+                document
+            ).ready(function() {
+                $(
+                    'body .globalContainer .container .sectionsContainer .terminalSection input[type="text"]'
+                ).on('input', function() {
+                    let currentPrediction = '';
+                    let currentIndex = 0;
+
+                    const words = [
+                        'open',
+                        'panic',
+                        'forward',
+                        'back',
+                        'echo'
+                    ];
+
+                    const filteredWords = words.filter(
+                        (word) =>
+                        (word.startsWith($(this).val()))
+                    );
+
+                    if (filteredWords.length > 0) {
+                        currentPrediction = filteredWords[0];
+
+                        $(
+                            'body .globalContainer .container .sectionsContainer .terminalSection .suggestion'
+                        ).text(currentPrediction.slice($(this).val().length));
+
+                        currentIndex = $(this).val().length;
+                    } else {
+                        currentPrediction = '';
+
+                        $(
+                            'body .globalContainer .container .sectionsContainer .terminalSection .suggestion'
+                        ).text('');
+
+                        currentIndex = 0;
+                    }
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer .terminalSection input[type="text"]'
+                    ).on('keydown', function(e) {
+                        if (e.keyCode === 39 || e.keyCode === 9) {
+                            if (currentPrediction !== '') {
+                                $(
+                                    'body .globalContainer .container .sectionsContainer .terminalSection input[type="text"]'
+                                ).val(
+                                    currentPrediction
+                                );
+
+                                $(
+                                    'body .globalContainer .container .sectionsContainer .terminalSection .suggestion'
+                                ).text('');
+
+                                currentIndex = currentPrediction.length;
+                            }
+                        }
+                    });
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer .terminalSection input[type="text"]'
+                    ).on('keypress', function(e, url) {
+                        if (e.key === 'Enter') {
+                            const input = $(this).val();
+
+                            const parts = input.split(' ');
+                            const command = parts.shift().trim();
+                            const args = parts.join(' ').trim();
+
+                            if (command.toLowerCase() === 'open') {
+                                if (args) {
+                                    window.location.href = args;
+                                } else {
+                                    alert('Please provide an argument.');
+                                }
+                            } else if (command.toLowerCase() === 'panic') {
+                                if (args) {
+                                    window.location.replace(args);
+                                } else {
+                                    alert('Please provide an argument.');
+                                }
+                            } else if (command.toLowerCase() === 'forward') {
+                                window.history.go(+1);
+                            } else if (command.toLowerCase() === 'back') {
+                                window.history.go(-1);
+                            } else if (command.toLowerCase() === 'echo') {
+                                if (args) {
+                                    alert(args);
+                                } else {
+                                    alert('Please provide an argument.');
+                                }
+                            }
+
+                            $(this).val('');
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <script
+            type="text/javascript"
+        >
+            $(
+                document
+            ).ready(function() {
+                $(
+                    'body .globalContainer .container .sectionsContainer .settingsSection .cloakingToUse .faviconInput'
+                ).on('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        localStorage.setItem(
+                            'faviconToUse',
+                            $(
+                                'body .globalContainer .container .sectionsContainer .settingsSection .cloakingToUse .faviconInput'
+                            ).val.toString()
+                        );
+                    }
+                });
+
+                $(
+                    'body .globalContainer .container .sectionsContainer .settingsSection .cloakingToUse .titleInput'
+                ).on('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        localStorage.setItem(
+                            'titleToUse',
+                            $(
+                                'body .globalContainer .container .sectionsContainer .settingsSection .cloakingToUse .titleInput'
+                            ).val.toString()
+                        );
+                    }
+                });
+            });
+        </script>
+
+        <script
+            type="text/javascript"
+        >
+            $(
+                document
+            ).ready(function() {
+                $(
+                    'body .globalContainer .container .sectionsContainer .settingsSection .proxyToUse .promptButton'
+                ).on('click', function() {
+                    const p = prompt('Proxy to use [ultraviolet/rammerhead]: ');
+
+                    if (p == 'rammerhead') {
+                        localStorage.setItem('proxyToUse', 'rammerhead');
+                    } else if (p == 'ultraviolet') {
+                        localStorage.setItem('proxyToUse', 'ultraviolet');
+                    } else {
+                        alert('Please provide a valid proxy.');
+                    }
+                });
+            });
+        </script>
+
+        <script
+            type="text/javascript"
+        >
+            $(
+                document
+            ).ready(function() {
+                let isVisible = true;
+
+                $(
+                    'body .globalContainer .container .icons ion-icon[name="settings-outline"]'
+                ).on('click', function() {
+                    isVisible = !isVisible;
+
+                    $(
+                        'body .globalContainer .container .searchSection'
+                    ).css(
+                        isVisible ? {
+                            display: 'none'
+                        } : {
+                            display: 'flex'
+                        }
+                    );
+
+                    if (isVisible) {
+                        $(
+                            'body .globalContainer .container .sectionsContainer div'
+                        ).not('.settingsSection, .settingsSection *').hide();
+                    }
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .settingsSection, body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .settingsSection *'
+                    ).css(
+                        isVisible ? {
+                            display: 'flex',
+                            opacity: '1'
+                        } : {
+                            display: 'none',
+                            opacity: '0'
+                        }
+                    );
+
+                    $(
+                        'body .globalContainer .container .icons ion-icon[name="settings-outline"]:hover'
+                    ).css(
+                        isVisible ? {
+                            transform: 'none',
+                        } : {
+                            transform: 'rotate(360deg)'
+                        }
+                    );
+                });
+            });
+        </script>
+
+        <script>
+            const searchEngineInputElement = $(
+                'body .globalContainer .container .sectionsContainer .settingsSection .searchEngine input'
+            );
+
+            const searchEngineInput = $(
+                'body .globalContainer .container .sectionsContainer .settingsSection .searchEngine input'
+            ).val();
+
+            searchEngineInputElement.on('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    if (searchEngineInput) {
+                        if (!(localStorage.getItem('searchEnginePrefix'))) {
+                            localStorage.setItem(
+                                'searchEnginePrefix', 
+                                'https://www.google.com/search?q='
+                            );
+                        } else if (localStorage.getItem('searchEnginePrefix') == '') {
+                            localStorage.setItem(
+                                'searchEnginePrefix', 
+                                'https://www.google.com/search?q='
+                            );
+                        } else if (searchEngineInput !== '' && searchEngineInput.endsWith('=')) {
+                            localStorage.setItem(
+                                'searchEnginePrefix', 
+                                searchEngineInput || 
+                                ''
+                            );
+                        } else if (!(searchEngineInput.endsWith('='))) {
+                            alert('Please provide a search URL prefix that ends with "="');
+                        }
+                    } else {
+                        alert('Please provide a search URL prefix');
+                    }
+                }
+            });
+        </script>
+
+        <script>
+            $(
+                document
+            ).ready(function() {
+                let isVisible = true;
+
+                $(
+                    'body .globalContainer .container .icons ion-icon[name="terminal-outline"]'
+                ).on('click', function() {
+                    isVisible = !isVisible;
+
+                    $(
+                        'body .globalContainer .container .searchSection'
+                    ).css(
+                        isVisible ? {
+                            display: 'none'
+                        } : {
+                            display: 'flex'
+                        }
+                    );
+
+                    if (isVisible) {
+                        $(
+                            'body .globalContainer .container .sectionsContainer div'
+                        ).not('.terminalSection, .terminalSection *').hide();
+                    }
+
+                    $(
+                        'body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .terminalSection, body .globalContainer .container .sectionsContainer, body .globalContainer .container .sectionsContainer .terminalSection *'
+                    ).css(
+                        isVisible ? {
+                            display: 'flex',
+                            opacity: '1'
+                        } : {
+                            display: 'none',
+                            opacity: '0'
+                        }
+                    );
+
+                    $(
+                        'body .globalContainer .container .icons ion-icon[name="terminal-outline"]:hover'
+                    ).css(
+                        isVisible ? {
+                            transform: 'none'
+                        } : {
+                            transform: 'translate(-5%, 0)'
+                        }
+                    );
+                });
+            });
+        </script>
+
+        <script rel="preload" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+        <script>
+            particlesJS('particlesJS', {
+                particles: {
+                    number: {
+                        value: 300,
+                        density: {
+                            enable: true,
+                            value_area: 600,
+                        },
+                    },
+                    color: {
+                        value: "#ffffff",
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000",
+                        },
+                        polygon: {
+                            nb_sides: 5,
+                        },
+                        image: {
+                            src: "img/github.svg",
+                            width: 100,
+                            height: 100,
+                        },
+                    },
+                    opacity: {
+                        value: 1,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false,
+                        },
+                    },
+                    size: {
+                        value: 5,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 40,
+                            size_min: 0.1,
+                            sync: false,
+                        },
+                    },
+                    line_linked: {
+                        enable: false,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1,
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "bottom",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200,
+                        },
+                    },
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        onclick: {
+                            enable: false,
+                            mode: "push",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        grab: {
+                            distance: 400,
+                            line_linked: {
+                                opacity: 1,
+                            },
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 40,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3,
+                        },
+                        repulse: {
+                            distance: 40,
+                            duration: 0.4,
+                        },
+                        push: {
+                            particles_nb: 4,
+                        },
+                        remove: {
+                            particles_nb: 2,
+                        },
+                    },
+                },
+                retina_detect: true,
+            });
+        </script>
+
+        <script 
+            type="module" 
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script 
+            nomodule 
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>

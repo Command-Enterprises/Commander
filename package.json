@@ -1,16 +1,15 @@
 {
-  "name": "commander",
-  "version": "1.0.0",
-  "description": "The Future. Commander Proxy",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/proxy.js",
-    "build": "echo 'No build process required'"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {},
-  "keywords": ["proxy"],
-  "author": "Preston Truong, Sequoia Haynes, ",
-  "license": "GNU General Public License v3.0"
+    "name": "commander",
+    "private": "true",
+    "type": "module",
+    "version": "0.1.0",
+    "license": "GPL-3.0-only",
+    "description": "Commander is a swift and quite nimble proxy site tailored to elude suppression from cyberspace.",
+    "dependencies": {
+        "@tomphttp/bare-server-node": "2.0.3",
+        "@titaniumnetwork-dev/ultraviolet": "3.1.2",
+        "serve-static": "1.15.0",
+        "express": "4.19.2",
+        "rammerhead": "https://github.com/holy-unblocker/rammerhead/releases/download/v1.2.41-holy.5/rammerhead-1.2.41-holy.5.tgz"
+    }
 }

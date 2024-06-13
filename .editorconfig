@@ -1,0 +1,18 @@
+root = true
+
+[*]
+end_of_line = crlf
+insert_final_newline = true
+charset = utf-8
+
+[*.astro]
+end_of_line = crlf
+insert_final_newline = false
+
+[*.{css,js,mjs}]
+end_of_line = crlf
+insert_final_newline = true
+
+[public/sw/{dynamic,uv}/*.js]
+end_of_line = crlf
+insert_final_newline = false

@@ -1,4 +1,0 @@
-function go(value)
-{
-    
-}
