@@ -1,0 +1,1 @@
+window.onbeforeunload = () => 1;
